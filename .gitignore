@@ -1,0 +1,25 @@
+# git ignore file
+Release
+Debug
+/ShippingController(V1.0)/ShippingController(V1.0)/obj/Debug/ShippingController(V1.0).csproj.FileListAbsolute.txt
+/ShippingController(V1.0)/ShippingController(V1.0)/obj/Debug/ShippingController(V1.0).csprojResolveAssemblyReference.cache
+/ShippingController(V1.0)/ShippingController(V1.0)/obj/Debug/ShippingController(V1.0).dll
+/ShippingController(V1.0)/ShippingController(V1.0)/obj/Debug/ShippingController(V1.0).pdb
+
+ShippingController(V1.0)\ShippingController(V1.0)\bin*/
+ShippingController(V1.0)/ShippingController(V1.0)/bin/ShippingController(V1.0).pdb
+ShippingController(V1.0)\ShippingController(V1.0)\bin*/
+ShippingController(V1.0)\ShippingController(V1.0)\obj\Debug*/
+ShippingController(V1.0)\ShippingController(V1.0)\obj\Debug*/
+ShippingController(V1.0)\ShippingController(V1.0)\obj\Debug*/
+ShippingController(V1.0)\ShippingController(V1.0)\obj\Release*/
+ShippingController(V1.0)\ShippingController(V1.0)\obj\Release*/
+ShippingController(V1.0)\ShippingController(V1.0)\obj\Release*/
+ShippingController(V1.0)\ShippingController(V1.0)\obj\Release*/
+ShippingController(V1.0)\ShippingController(V1.0)\obj\Release*/
+ShippingController(V1.0)/ShippingController(V1.0)/bin/PackingClassLibrary.dll
+ShippingController(V1.0)/ShippingController(V1.0)/bin/PackingClassLibrary.pdb
+*.pdb
+*.dll
+ShippingController(V1.0)\ShippingController(V1.0)\bin*/
+*.suo
