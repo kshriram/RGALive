@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Save" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Save.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Save.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Save.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/KrausWarehouseServices.DTO.Shipping" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISave_Audit_InputMessage">
+    <wsdl:part name="parameters" element="tns:Audit" />
+  </wsdl:message>
+  <wsdl:message name="ISave_Audit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuditResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_BoxPackage_InputMessage">
+    <wsdl:part name="parameters" element="tns:BoxPackage" />
+  </wsdl:message>
+  <wsdl:message name="ISave_BoxPackage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoxPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_Package_InputMessage">
+    <wsdl:part name="parameters" element="tns:Package" />
+  </wsdl:message>
+  <wsdl:message name="ISave_Package_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_PackageDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageDetail" />
+  </wsdl:message>
+  <wsdl:message name="ISave_PackageDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_Role_InputMessage">
+    <wsdl:part name="parameters" element="tns:Role" />
+  </wsdl:message>
+  <wsdl:message name="ISave_Role_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_Shipping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Shipping" />
+  </wsdl:message>
+  <wsdl:message name="ISave_Shipping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_StationMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:StationMaster" />
+  </wsdl:message>
+  <wsdl:message name="ISave_StationMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StationMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_User_InputMessage">
+    <wsdl:part name="parameters" element="tns:User" />
+  </wsdl:message>
+  <wsdl:message name="ISave_User_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_UpdateByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateByUser" />
+  </wsdl:message>
+  <wsdl:message name="ISave_UpdateByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_UserStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserStation" />
+  </wsdl:message>
+  <wsdl:message name="ISave_UserStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_ErrorLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:ErrorLog" />
+  </wsdl:message>
+  <wsdl:message name="ISave_ErrorLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ErrorLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISave_TrackingUpdateByReadytoExpert_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingUpdateByReadytoExpert" />
+  </wsdl:message>
+  <wsdl:message name="ISave_TrackingUpdateByReadytoExpert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingUpdateByReadytoExpertResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISave">
+    <wsdl:operation name="Audit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/Audit" message="tns:ISave_Audit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/AuditResponse" message="tns:ISave_Audit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BoxPackage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/BoxPackage" message="tns:ISave_BoxPackage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/BoxPackageResponse" message="tns:ISave_BoxPackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Package">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/Package" message="tns:ISave_Package_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/PackageResponse" message="tns:ISave_Package_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/PackageDetail" message="tns:ISave_PackageDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/PackageDetailResponse" message="tns:ISave_PackageDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Role">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/Role" message="tns:ISave_Role_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/RoleResponse" message="tns:ISave_Role_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Shipping">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/Shipping" message="tns:ISave_Shipping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/ShippingResponse" message="tns:ISave_Shipping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StationMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/StationMaster" message="tns:ISave_StationMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/StationMasterResponse" message="tns:ISave_StationMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="User">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/User" message="tns:ISave_User_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/UserResponse" message="tns:ISave_User_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/UpdateByUser" message="tns:ISave_UpdateByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/UpdateByUserResponse" message="tns:ISave_UpdateByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserStation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/UserStation" message="tns:ISave_UserStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/UserStationResponse" message="tns:ISave_UserStation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ErrorLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/ErrorLog" message="tns:ISave_ErrorLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/ErrorLogResponse" message="tns:ISave_ErrorLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingUpdateByReadytoExpert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISave/TrackingUpdateByReadytoExpert" message="tns:ISave_TrackingUpdateByReadytoExpert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISave/TrackingUpdateByReadytoExpertResponse" message="tns:ISave_TrackingUpdateByReadytoExpert_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISave" type="tns:ISave">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Audit">
+      <soap:operation soapAction="http://tempuri.org/ISave/Audit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoxPackage">
+      <soap:operation soapAction="http://tempuri.org/ISave/BoxPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Package">
+      <soap:operation soapAction="http://tempuri.org/ISave/Package" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageDetail">
+      <soap:operation soapAction="http://tempuri.org/ISave/PackageDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Role">
+      <soap:operation soapAction="http://tempuri.org/ISave/Role" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Shipping">
+      <soap:operation soapAction="http://tempuri.org/ISave/Shipping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StationMaster">
+      <soap:operation soapAction="http://tempuri.org/ISave/StationMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="User">
+      <soap:operation soapAction="http://tempuri.org/ISave/User" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateByUser">
+      <soap:operation soapAction="http://tempuri.org/ISave/UpdateByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserStation">
+      <soap:operation soapAction="http://tempuri.org/ISave/UserStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ErrorLog">
+      <soap:operation soapAction="http://tempuri.org/ISave/ErrorLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingUpdateByReadytoExpert">
+      <soap:operation soapAction="http://tempuri.org/ISave/TrackingUpdateByReadytoExpert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Save">
+    <wsdl:port name="BasicHttpBinding_ISave" binding="tns:BasicHttpBinding_ISave">
+      <soap:address location="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Save.svc/SOA" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

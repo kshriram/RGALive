@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/KrausWarehouseServices.DTO.Shipping" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/KrausWarehouseServices.DTO.Shipping" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Get.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfviewGet_Shipping_DataDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="viewGet_Shipping_DataDTO" nillable="true" type="tns:viewGet_Shipping_DataDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfviewGet_Shipping_DataDTO" nillable="true" type="tns:ArrayOfviewGet_Shipping_DataDTO" />
+  <xs:complexType name="viewGet_Shipping_DataDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllocationLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryOfOrigin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemWeight" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LineType" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="LocationCombined" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MAP_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Row_Number" type="xs:int" />
+      <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipmentID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TCLCOD_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TarrifCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPCCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitOfMeasure" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValidationFLG" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="viewGet_Shipping_DataDTO" nillable="true" type="tns:viewGet_Shipping_DataDTO" />
+  <xs:complexType name="ArrayOfAutditDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AutditDTO" nillable="true" type="tns:AutditDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAutditDTO" nillable="true" type="tns:ArrayOfAutditDTO" />
+  <xs:complexType name="AutditDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ActionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActionValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserLogID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutditDTO" nillable="true" type="tns:AutditDTO" />
+  <xs:complexType name="ArrayOfBoxPackageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BoxPackageDTO" nillable="true" type="tns:BoxPackageDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBoxPackageDTO" nillable="true" type="tns:ArrayOfBoxPackageDTO" />
+  <xs:complexType name="BoxPackageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BOXNUM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BoxCreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BoxHeight" type="xs:double" />
+      <xs:element minOccurs="0" name="BoxID" type="ser:guid" />
+      <xs:element minOccurs="0" name="BoxLength" type="xs:double" />
+      <xs:element minOccurs="0" name="BoxMeasurementTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BoxType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BoxWeight" type="xs:double" />
+      <xs:element minOccurs="0" name="BoxWidth" type="xs:double" />
+      <xs:element minOccurs="0" name="PackingID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ROWID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BoxPackageDTO" nillable="true" type="tns:BoxPackageDTO" />
+  <xs:complexType name="ArrayOfPackageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PackageDTO" nillable="true" type="tns:PackageDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackageDTO" nillable="true" type="tns:ArrayOfPackageDTO" />
+  <xs:complexType name="PackageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MangerOverride" type="xs:int" />
+      <xs:element minOccurs="0" name="PCKROWID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackingId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PackingStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="ROWID" type="xs:int" />
+      <xs:element minOccurs="0" name="ShipmentLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ShippingNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdatedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Updatedby" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PackageDTO" nillable="true" type="tns:PackageDTO" />
+  <xs:complexType name="ArrayOfPackageBoxTrackingDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PackageBoxTrackingDTO" nillable="true" type="tns:PackageBoxTrackingDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackageBoxTrackingDTO" nillable="true" type="tns:ArrayOfPackageBoxTrackingDTO" />
+  <xs:complexType name="PackageBoxTrackingDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BOXNUM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BoxLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Carrier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreightCharges" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Heights" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lengths" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SKUNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SKUQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrackingNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weights" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Widths" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PackageBoxTrackingDTO" nillable="true" type="tns:PackageBoxTrackingDTO" />
+  <xs:complexType name="ArrayOfShipmentDetailPageGrid1DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShipmentDetailPageGrid1DTO" nillable="true" type="tns:ShipmentDetailPageGrid1DTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShipmentDetailPageGrid1DTO" nillable="true" type="tns:ArrayOfShipmentDetailPageGrid1DTO" />
+  <xs:complexType name="ShipmentDetailPageGrid1DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoxCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Carrier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpectedShipDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PONumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartnerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipmentID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipmentStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingCreatedTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShippingDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrkCount" type="xs:int" />
+      <xs:element minOccurs="0" name="pkqty" type="xs:int" />
+      <xs:element minOccurs="0" name="shqty" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShipmentDetailPageGrid1DTO" nillable="true" type="tns:ShipmentDetailPageGrid1DTO" />
+  <xs:complexType name="ArrayOfPackageDetailDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PackageDetailDTO" nillable="true" type="tns:PackageDetailDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackageDetailDTO" nillable="true" type="tns:ArrayOfPackageDetailDTO" />
+  <xs:complexType name="PackageDetailDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoxNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryOfOrigin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MAP_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PackagedetailID" type="ser:guid" />
+      <xs:element minOccurs="0" name="PackingId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SKUNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SKUQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="SKUScanDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShipmentLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TCLCOD_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TarrifCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitOfMeasure" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdatedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdatedDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PackageDetailDTO" nillable="true" type="tns:PackageDetailDTO" />
+  <xs:complexType name="ArrayOfRoleDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleDTO" nillable="true" type="tns:RoleDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoleDTO" nillable="true" type="tns:ArrayOfRoleDTO" />
+  <xs:complexType name="RoleDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdatedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Updatedby" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoleDTO" nillable="true" type="tns:RoleDTO" />
+  <xs:complexType name="ArrayOfShippingDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShippingDTO" nillable="true" type="tns:ShippingDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShippingDTO" nillable="true" type="tns:ArrayOfShippingDTO" />
+  <xs:complexType name="ShippingDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADDCODFRT_0" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="BACCT_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BILLOPT_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CNTFULNAM_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODCHG_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTBILL_0" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Carrier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CustomerName1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOWNFLG_0" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="DeliveryContact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryProvider" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreightTerms" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressLine3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HDLCHG_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INSVAL_0" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Indexcode" type="xs:short" />
+      <xs:element minOccurs="0" name="MDL_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OurSupplierNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentTerms" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROWID" type="xs:int" />
+      <xs:element minOccurs="0" name="SHIPPINGROWID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipmentStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingEndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShippingID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ShippingNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingStartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TPBILL_0" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ToAddressCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressLine3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPackages" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdatedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Updatedby" type="ser:guid" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XB_RESFLG_0" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="YCARSRV_0" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShippingDTO" nillable="true" type="tns:ShippingDTO" />
+  <xs:complexType name="ArrayOfStationMasterDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StationMasterDTO" nillable="true" type="tns:StationMasterDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStationMasterDTO" nillable="true" type="tns:ArrayOfStationMasterDTO" />
+  <xs:complexType name="StationMasterDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeviceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegistrationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RequestedUserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StaionLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StationAlive" type="xs:int" />
+      <xs:element minOccurs="0" name="StationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdatedDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Updatedby" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StationMasterDTO" nillable="true" type="tns:StationMasterDTO" />
+  <xs:complexType name="ArrayOfTrackingDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrackingDTO" nillable="true" type="tns:TrackingDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrackingDTO" nillable="true" type="tns:ArrayOfTrackingDTO" />
+  <xs:complexType name="TrackingDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BOXNUM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BoxID" type="ser:guid" />
+      <xs:element minOccurs="0" name="CODCHG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODOPT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CustomerPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Exported" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HDLCHG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Height" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INSVAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Length" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PCKCHG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PCKTYP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PKUDAT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackingID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ReadyToExport" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SHIDAT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SHIP_REF1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SRVTYP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingID" type="ser:guid" />
+      <xs:element minOccurs="0" name="TOTPKG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOTSHP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOTWEI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrackingDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TrackingID" type="ser:guid" />
+      <xs:element minOccurs="0" name="TrackingNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrackingNum_FEDEX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrackingNum_UPS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdatedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Updatedby" type="ser:guid" />
+      <xs:element minOccurs="0" name="VOIIND" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Width" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XSPECHG_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XWAREHOUSE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingDTO" nillable="true" type="tns:TrackingDTO" />
+  <xs:complexType name="ArrayOfUserDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserDTO" nillable="true" type="tns:UserDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserDTO" nillable="true" type="tns:ArrayOfUserDTO" />
+  <xs:complexType name="UserDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RoleID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdatedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Updatedby" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserJoiningDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPassword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserDTO" nillable="true" type="tns:UserDTO" />
+  <xs:complexType name="ArrayOfUserStationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserStationDTO" nillable="true" type="tns:UserStationDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserStationDTO" nillable="true" type="tns:ArrayOfUserStationDTO" />
+  <xs:complexType name="UserStationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoginDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UpdatedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Updatedby" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserStationID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserStationDTO" nillable="true" type="tns:UserStationDTO" />
+  <xs:complexType name="ArrayOfErrorLogDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorLogDTO" nillable="true" type="tns:ErrorLogDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfErrorLogDTO" nillable="true" type="tns:ArrayOfErrorLogDTO" />
+  <xs:complexType name="ErrorLogDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ErrorlogID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorLogDTO" nillable="true" type="tns:ErrorLogDTO" />
+  <xs:complexType name="ArrayOfviewgetShippingDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="viewgetShippingDetails" nillable="true" type="tns:viewgetShippingDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfviewgetShippingDetails" nillable="true" type="tns:ArrayOfviewgetShippingDetails" />
+  <xs:complexType name="viewgetShippingDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADDCODFRT_0" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="BACCT_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BILLOPT_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CNTFULNAM_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODCHG_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTBILL_0" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Carrier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOWNFLG_0" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="DeliveryContact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryProvider" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreightTerms" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressLine3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddressZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HDLCHG_0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INSVAL_0" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Indexcode" type="xs:short" />
+      <xs:element minOccurs="0" name="OrderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OurSupplierNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentTerms" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipmentStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TPBILL_0" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ToAddressCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressLine3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAddressZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPackages" type="xs:int" />
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XB_RESFLG_0" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="viewgetShippingDetails" nillable="true" type="tns:viewgetShippingDetails" />
+</xs:schema>

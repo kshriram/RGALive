@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AFA721AB-6DCD-49C4-A51B-7B292D644CD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PackingClassLibrary</RootNamespace>
+    <AssemblyName>PackingClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\visualstudio\Packing Net\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Service.cs" />
+    <Compile Include="Commands\SMcommands\cmdBox.cs" />
+    <Compile Include="Commands\SMcommands\cmdDeviceMACaddress.cs" />
+    <Compile Include="Commands\SMcommands\cmdPackage.cs" />
+    <Compile Include="Commands\SMcommands\cmdPackageBoxTracking.cs" />
+    <Compile Include="Commands\SMcommands\cmdRole.cs" />
+    <Compile Include="Commands\SMcommands\cmdSageOperations.cs" />
+    <Compile Include="Commands\SMcommands\cmdShipmentDetailPageGrid1.cs" />
+    <Compile Include="Commands\SMcommands\cmdShipping.cs" />
+    <Compile Include="Commands\SMcommands\cmdStation.cs" />
+    <Compile Include="Commands\SMcommands\cmdUser.cs" />
+    <Compile Include="Commands\SMcommands\cmdViewExtra.cs" />
+    <Compile Include="Commands\SMcommands\RGA\cmdReasonCategory.cs" />
+    <Compile Include="Commands\SMcommands\RGA\cmdReasons.cs" />
+    <Compile Include="Commands\SMcommands\RGA\cmdReturn.cs" />
+    <Compile Include="Commands\SMcommands\RGA\cmdReturnDetails.cs" />
+    <Compile Include="Commands\SMcommands\RGA\cmdReturnedSKUPoints.cs" />
+    <Compile Include="Commands\SMcommands\RGA\cmdReturnImages.cs" />
+    <Compile Include="Commands\SMcommands\RGA\cmdRMAComment.cs" />
+    <Compile Include="Commands\SMcommands\RGA\cmdRMAInfo.cs" />
+    <Compile Include="Commands\SMcommands\RGA\cmdSKUReasons.cs" />
+    <Compile Include="Commands\SMcommands\RGA\cmdUser.cs" />
+    <Compile Include="CustomEntity\ReportEntitys\cstDashBoardStion.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstBoxPackage.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstBoxPackageNew.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstPackageBoxTracking.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstShipmentDetailPageGrid1.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstShipmentInformationAlls.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstUserEachPacked.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstViewExtraColumns.cs" />
+    <Compile Include="CustomEntity\SMEntitys\PermissionType.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\ReasonCategoty.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\Resons.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\Return.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\ReturnDetail.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\ReturnDetails.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\ReturnedSKUPoints.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\ReturnForFrid.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\ReturnImage.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\ReturnWithString.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\RMAComment.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\RMAInfo.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\skuAndreturndetail.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\SKUReason.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\SkuReasonIDSequence.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\StatusAndPoints.cs" />
+    <Compile Include="CustomEntity\SMEntitys\RGA\UserMaster.cs" />
+    <Compile Include="Models\model_Box.cs" />
+    <Compile Include="Models\model_Packing.cs" />
+    <Compile Include="Models\model_Shipment.cs" />
+    <Compile Include="Commands\ReportCommands\cmdBPNameShippingNum.cs" />
+    <Compile Include="Commands\ReportCommands\cmdShippinNumStatus.cs" />
+    <Compile Include="Commands\ReportCommands\cmdStationTotalPacked.cs" />
+    <Compile Include="Commands\ReportCommands\cmdUserShipmentCount.cs" />
+    <Compile Include="Commands\SMcommands\cmdTracking.cs" />
+    <Compile Include="Commands\SMcommands\cmdSetUserStation.cs" />
+    <Compile Include="Commands\ReportCommands\cmdPackingTimeAndQuantity.cs" />
+    <Compile Include="Commands\ReportCommands\cmdUserCurrentStationAndDeviceID.cs" />
+    <Compile Include="Commands\ReportCommands\GetTotalShipmentPackedToday.cs" />
+    <Compile Include="Commands\SMcommands\cmdShipment.cs" />
+    <Compile Include="CustomEntity\ReportEntitys\cstShipmentNumStatus.cs" />
+    <Compile Include="CustomEntity\ReportEntitys\cstShippingInfoBPName.cs" />
+    <Compile Include="CustomEntity\ReportEntitys\cstStationToatlPacked.cs" />
+    <Compile Include="CustomEntity\ReportEntitys\cstUserShipmentCount.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstShippingTbl.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstStationMasterTbl.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstTrackingTbl.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstUserStationTbl.cs" />
+    <Compile Include="CustomEntity\ReportEntitys\cstPackingTime.cs" />
+    <Compile Include="CustomEntity\ReportEntitys\cstShipmentPackedTodayAndAvgTime.cs" />
+    <Compile Include="CustomEntity\ReportEntitys\cstUserCurrentStationAndDeviceID.cs" />
+    <Compile Include="GlobalClasses\ClGlobal.cs" />
+    <Compile Include="Models\model_Station.cs" />
+    <Compile Include="Models\model_User.cs" />
+    <Compile Include="ReportController.cs" />
+    <Compile Include="Service References\DeleteRMAService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DeleteService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GetRGAService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GetService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SetRGAService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SetService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="smController.cs" />
+    <Compile Include="Commands\SMcommands\cmdAbstractEntity.cs" />
+    <Compile Include="Commands\SMcommands\cmdErrorLog.cs" />
+    <Compile Include="Commands\SMcommands\cmdGetAverageTime.cs" />
+    <Compile Include="Commands\SMcommands\cmdGetRoleCommand.cs" />
+    <Compile Include="Commands\SMcommands\cmdSkuImages.cs" />
+    <Compile Include="Commands\SMcommands\cmdLanguageTranslator.cs" />
+    <Compile Include="Commands\SMcommands\cmdLocalFile.cs" />
+    <Compile Include="Commands\SMcommands\cmdPakingDetails.cs" />
+    <Compile Include="Commands\SMcommands\cmdUPCConverter.cs" />
+    <Compile Include="Commands\SMcommands\cmdUpdateRole.cs" />
+    <Compile Include="Commands\SMcommands\cmbAuditLog.cs" />
+    <Compile Include="CustomEntity\SMEntitys\csteActionenum.cs" />
+    <Compile Include="CustomEntity\SMEntitys\csteActionType.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstShipmentQuary.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstErrorLog.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstKeyValue.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstPackageTbl.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstPackageDetails.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstPermissions.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstRoleTbl.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstShipmentLocationWise.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstShipment.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstUserMasterTbl.cs" />
+    <Compile Include="CustomEntity\SMEntitys\cstAuditTbl.cs" />
+    <Compile Include="Error Loger\elAction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="packages.config" />
+    <None Include="Service References\DeleteRMAService\Delete.wsdl" />
+    <None Include="Service References\DeleteRMAService\KrausWarehouseServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeleteRMAService\KrausWarehouseServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeleteService\Delete.wsdl" />
+    <None Include="Service References\DeleteService\KrausWarehouseServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeleteService\KrausWarehouseServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetRGAService\Get.wsdl" />
+    <None Include="Service References\GetRGAService\KrausWarehouseServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetRGAService\KrausWarehouseServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetRGAService\KrausWarehouseServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetRGAService\KrausWarehouseServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetRGAService\KrausWarehouseServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.ReasonCategoryDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.ReasonsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.ReturnDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.ReturnDetailsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.ReturnDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.ReturnedSKUReasonPointsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.ReturnImagesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.ReturnWithStringDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.RMAAuditDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.RMACommentDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.RMAInfoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.RoleDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.SKUReasonsDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetRGAService\PackingClassLibrary.GetRGAService.UserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\Get.wsdl" />
+    <None Include="Service References\GetService\KrausWarehouseServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetService\KrausWarehouseServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetService\KrausWarehouseServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetService\KrausWarehouseServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetService\KrausWarehouseServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.AutditDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.BoxPackageDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.DashBoardStionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.ErrorLogDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.PackageBoxTrackingDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.PackageDetailDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.PackageDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.PackingTimeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.RoleDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.ShipmentDetailPageGrid1DTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.ShipmentNumStatusDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.ShipmentPackedTodayAndAvgTimeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.ShippingDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.ShippingInfoBPNameDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.StationMasterDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.StationToatlPackedDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.TrackingDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.UserCurrentStationAndDeviceIDDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.UserDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.UserShipmentCountDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.UserStationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.UserTotalPacked.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.viewgetShippingDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GetService\PackingClassLibrary.GetService.viewGet_Shipping_DataDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SetRGAService\KrausWarehouseServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SetRGAService\KrausWarehouseServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SetRGAService\KrausWarehouseServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SetRGAService\KrausWarehouseServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SetRGAService\Save.wsdl" />
+    <None Include="Service References\SetService\KrausWarehouseServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SetService\KrausWarehouseServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SetService\KrausWarehouseServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SetService\Save.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DeleteRMAService\" />
+    <WCFMetadataStorage Include="Service References\DeleteService\" />
+    <WCFMetadataStorage Include="Service References\GetRGAService\" />
+    <WCFMetadataStorage Include="Service References\GetService\" />
+    <WCFMetadataStorage Include="Service References\SetRGAService\" />
+    <WCFMetadataStorage Include="Service References\SetService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetRGAService\KrausWarehouseServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetRGAService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetRGAService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetRGAService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteService\KrausWarehouseServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetRGAService\KrausWarehouseServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetRGAService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetRGAService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetRGAService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetService\KrausWarehouseServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\GetService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetService\KrausWarehouseServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SetService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteRMAService\KrausWarehouseServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteRMAService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteRMAService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DeleteRMAService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{554C3F05-8749-4942-9CC9-363A1C22F60A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShippingController_V1._0_</RootNamespace>
+    <AssemblyName>ShippingController%28V1.0%29</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <IncludeAppPool>true</IncludeAppPool>
+    <PublishDatabases>true</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Users\Shiva5\Desktop\KACHARA\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet.Highcharts">
+      <HintPath>..\..\..\..\Users\Shiva5\Desktop\KACHARA\Charting\DotNet.Highcharts.2.0\DotNet.Highcharts.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\PackingClassLibrary\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net">
+      <HintPath>..\packages\Ext.NET.2.5.2\lib\net40\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities">
+      <HintPath>..\packages\Ext.NET.Utilities.2.4.0\lib\Ext.Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>D:\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>D:\Avinash\Backups VIMP\ShipmentComptroller Backup\Oct Backup\ShippingController(V1.0)-14Oct\ShippingController(V1.0)\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="KeepAutomation.Barcode.Web">
+      <HintPath>D:\deepak\KA.Barcode.for.ASPNET\KeepAutomation.Barcode.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.OutlookViewCtl, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PackingClassLibrary">
+      <HintPath>..\..\PackingClassLibrary\bin\Debug\PackingClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Transformer.NET">
+      <HintPath>..\packages\Transformer.NET.2.1.1\lib\net35\Transformer.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>D:\Avinash\Softwares\ExtendedWPFToolkit_Binaries (1)\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="3.jpg" />
+    <Content Include="App_Readme\Ext.NET.Utilities\BREAKING_CHANGES.txt" />
+    <Content Include="App_Readme\Ext.NET.Utilities\LICENSE.txt" />
+    <Content Include="App_Readme\Ext.NET.Utilities\README.txt" />
+    <Content Include="App_Readme\Ext.NET\BREAKING_CHANGES.txt" />
+    <Content Include="App_Readme\Ext.NET\CHANGELOG.txt" />
+    <Content Include="App_Readme\Ext.NET\LICENSE.txt" />
+    <Content Include="App_Readme\Ext.NET\README.txt" />
+    <Content Include="App_Readme\Transformer.NET\LICENSE.txt" />
+    <Content Include="App_Readme\Transformer.NET\README.txt" />
+    <Content Include="Ext.NET.Default.aspx" />
+    <Content Include="Forms\Web Forms\AutoCompleteService.aspx" />
+    <Content Include="Forms\Web Forms\DemoGrid.aspx" />
+    <Content Include="Forms\Web Forms\DemoSearch.aspx" />
+    <Content Include="Forms\Web Forms\Excel.xsl" />
+    <Content Include="Forms\Web Forms\frmChart.aspx" />
+    <Content Include="Forms\Web Forms\frmDisableStation.aspx" />
+    <Content Include="Forms\Web Forms\frmErrorLog.aspx" />
+    <Content Include="Forms\Web Forms\frmHomePage.aspx" />
+    <Content Include="Forms\Web Forms\frmLogin.aspx" />
+    <Content Include="Forms\Web Forms\frmPopup.aspx" />
+    <Content Include="Forms\Web Forms\frmPopupForEditRMAReasons.aspx" />
+    <Content Include="Forms\Web Forms\frmRetunDetail.aspx" />
+    <Content Include="Forms\Web Forms\frmReturnEdit.aspx" />
+    <Content Include="Forms\Web Forms\frmRMAConfig.aspx" />
+    <Content Include="Forms\Web Forms\frmRMAEnter.aspx" />
+    <Content Include="Forms\Web Forms\frmRMAEnterWithPO.aspx" />
+    <Content Include="Forms\Web Forms\frmRMAFormPrint2.aspx" />
+    <Content Include="Forms\Web Forms\frmRMAPopup.aspx" />
+    <Content Include="Forms\Web Forms\frmRoles.aspx" />
+    <Content Include="Forms\Web Forms\frmShipmentInfoDetails.aspx" />
+    <Content Include="Forms\Web Forms\frmShipmentInformation.aspx" />
+    <Content Include="Forms\Web Forms\frmShippingInfo.aspx" />
+    <Content Include="Forms\Web Forms\frmSlipPrint.aspx" />
+    <Content Include="Forms\Web Forms\frmSRNumber.aspx" />
+    <Content Include="Forms\Web Forms\frmStationDashBoard.aspx" />
+    <Content Include="Forms\Web Forms\frmStations.aspx" />
+    <Content Include="Forms\Web Forms\frmTrackShipment.aspx" />
+    <Content Include="Forms\Web Forms\frmUserDetails.aspx" />
+    <Content Include="Forms\Web Forms\frmUserInformation.aspx" />
+    <Content Include="Forms\Web Forms\ImageServer.aspx" />
+    <Content Include="Forms\Web Forms\ImageShow.aspx" />
+    <Content Include="Forms\Web Forms\rptPacking.aspx" />
+    <Content Include="images\Printer-icon.png" />
+    <Content Include="images\RedFlag.jpg" />
+    <Content Include="images\Red_flag.png" />
+    <Content Include="PackingIcon.ico" />
+    <Content Include="Themes\CSS\MenuBar.css" />
+    <Content Include="Themes\Images\ad.jpg" />
+    <Content Include="Themes\Images\admin.jpg" />
+    <Content Include="Themes\Images\Arrow.gif" />
+    <Content Include="Themes\Images\close.jpg" />
+    <Content Include="Themes\Images\delete-xxl.png" />
+    <Content Include="Themes\Images\document-print.png" />
+    <Content Include="Themes\Images\ExcelIcon.png" />
+    <Content Include="Themes\Images\excel_icon.png" />
+    <Content Include="Themes\Images\k.png" />
+    <Content Include="Themes\Images\loading83.gif" />
+    <Content Include="Themes\Images\logoKraus.png" />
+    <Content Include="Themes\Images\main-bg.jpg" />
+    <Content Include="Themes\Images\progress.gif" />
+    <Content Include="Themes\Images\Search.png" />
+    <Content Include="Themes\Images\UserIcon.png" />
+    <Content Include="Themes\CSS\BlackCoffeeCSS.css" />
+    <Content Include="Themes\CSS\ddsmoothmenu.css" />
+    <Content Include="Themes\js\highcharts.js" />
+    <Content Include="Themes\js\jquery-1.5.1.min.js" />
+    <Content Include="Themes\js\jquery.min.js" />
+    <Content Include="TreeLineImages\dash.gif" />
+    <Content Include="TreeLineImages\dashminus.gif" />
+    <Content Include="TreeLineImages\dashplus.gif" />
+    <Content Include="TreeLineImages\i.gif" />
+    <Content Include="TreeLineImages\l.gif" />
+    <Content Include="TreeLineImages\lminus.gif" />
+    <Content Include="TreeLineImages\lplus.gif" />
+    <Content Include="TreeLineImages\minus.gif" />
+    <Content Include="TreeLineImages\noexpand.gif" />
+    <Content Include="TreeLineImages\plus.gif" />
+    <Content Include="TreeLineImages\r.gif" />
+    <Content Include="TreeLineImages\rminus.gif" />
+    <Content Include="TreeLineImages\rplus.gif" />
+    <Content Include="TreeLineImages\t.gif" />
+    <Content Include="TreeLineImages\tminus.gif" />
+    <Content Include="TreeLineImages\tplus.gif" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Master Forms\TestUser.Master.cs">
+      <DependentUpon>TestUser.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Master Forms\TestUser.Master.designer.cs">
+      <DependentUpon>TestUser.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\AutoCompleteService.aspx.cs">
+      <DependentUpon>AutoCompleteService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\AutoCompleteService.aspx.designer.cs">
+      <DependentUpon>AutoCompleteService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\DemoGrid.aspx.cs">
+      <DependentUpon>DemoGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\DemoGrid.aspx.designer.cs">
+      <DependentUpon>DemoGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\DemoSearch.aspx.cs">
+      <DependentUpon>DemoSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\DemoSearch.aspx.designer.cs">
+      <DependentUpon>DemoSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmChart.aspx.cs">
+      <DependentUpon>frmChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmChart.aspx.designer.cs">
+      <DependentUpon>frmChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmDisableStation.aspx.cs">
+      <DependentUpon>frmDisableStation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmDisableStation.aspx.designer.cs">
+      <DependentUpon>frmDisableStation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmErrorLog.aspx.cs">
+      <DependentUpon>frmErrorLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmErrorLog.aspx.designer.cs">
+      <DependentUpon>frmErrorLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmHomePage.aspx.cs">
+      <DependentUpon>frmHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmHomePage.aspx.designer.cs">
+      <DependentUpon>frmHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmPopup.aspx.cs">
+      <DependentUpon>frmPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmPopup.aspx.designer.cs">
+      <DependentUpon>frmPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmPopupForEditRMAReasons.aspx.cs">
+      <DependentUpon>frmPopupForEditRMAReasons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmPopupForEditRMAReasons.aspx.designer.cs">
+      <DependentUpon>frmPopupForEditRMAReasons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRetunDetail.aspx.cs">
+      <DependentUpon>frmRetunDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRetunDetail.aspx.designer.cs">
+      <DependentUpon>frmRetunDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmReturnEdit.aspx.cs">
+      <DependentUpon>frmReturnEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmReturnEdit.aspx.designer.cs">
+      <DependentUpon>frmReturnEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRMAConfig.aspx.cs">
+      <DependentUpon>frmRMAConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRMAConfig.aspx.designer.cs">
+      <DependentUpon>frmRMAConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRMAEnter.aspx.cs">
+      <DependentUpon>frmRMAEnter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRMAEnter.aspx.designer.cs">
+      <DependentUpon>frmRMAEnter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRMAEnterWithPO.aspx.cs">
+      <DependentUpon>frmRMAEnterWithPO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRMAEnterWithPO.aspx.designer.cs">
+      <DependentUpon>frmRMAEnterWithPO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRMAFormPrint2.aspx.cs">
+      <DependentUpon>frmRMAFormPrint2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRMAFormPrint2.aspx.designer.cs">
+      <DependentUpon>frmRMAFormPrint2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRMAPopup.aspx.cs">
+      <DependentUpon>frmRMAPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRMAPopup.aspx.designer.cs">
+      <DependentUpon>frmRMAPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRoles.aspx.cs">
+      <DependentUpon>frmRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmRoles.aspx.designer.cs">
+      <DependentUpon>frmRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmShipmentInfoDetails.aspx.cs">
+      <DependentUpon>frmShipmentInfoDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmShipmentInfoDetails.aspx.designer.cs">
+      <DependentUpon>frmShipmentInfoDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmShipmentInformation.aspx.cs">
+      <DependentUpon>frmShipmentInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmShipmentInformation.aspx.designer.cs">
+      <DependentUpon>frmShipmentInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmShippingInfo.aspx.cs">
+      <DependentUpon>frmShippingInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmShippingInfo.aspx.designer.cs">
+      <DependentUpon>frmShippingInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmSlipPrint.aspx.cs">
+      <DependentUpon>frmSlipPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmSlipPrint.aspx.designer.cs">
+      <DependentUpon>frmSlipPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmSRNumber.aspx.cs">
+      <DependentUpon>frmSRNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmSRNumber.aspx.designer.cs">
+      <DependentUpon>frmSRNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmStationDashBoard.aspx.cs">
+      <DependentUpon>frmStationDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmStationDashBoard.aspx.designer.cs">
+      <DependentUpon>frmStationDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmStations.aspx.cs">
+      <DependentUpon>frmStations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmStations.aspx.designer.cs">
+      <DependentUpon>frmStations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmTrackShipment.aspx.cs">
+      <DependentUpon>frmTrackShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmTrackShipment.aspx.designer.cs">
+      <DependentUpon>frmTrackShipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmUserDetails.aspx.cs">
+      <DependentUpon>frmUserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmUserDetails.aspx.designer.cs">
+      <DependentUpon>frmUserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmUserInformation.aspx.cs">
+      <DependentUpon>frmUserInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\frmUserInformation.aspx.designer.cs">
+      <DependentUpon>frmUserInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\ImageServer.aspx.cs">
+      <DependentUpon>ImageServer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\ImageServer.aspx.designer.cs">
+      <DependentUpon>ImageServer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\ImageShow.aspx.cs">
+      <DependentUpon>ImageShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\ImageShow.aspx.designer.cs">
+      <DependentUpon>ImageShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Web Forms\rptPacking.aspx.cs">
+      <DependentUpon>rptPacking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Web Forms\rptPacking.aspx.designer.cs">
+      <DependentUpon>rptPacking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExtensionMethods.cs" />
+    <Compile Include="Models\modelExportTo.cs" />
+    <Compile Include="Models\modelImageServer.cs" />
+    <Compile Include="Models\modelReasons.cs" />
+    <Compile Include="Models\modelReaturnUpdate.cs" />
+    <Compile Include="Models\modelReturn.cs" />
+    <Compile Include="Models\modelRoles.cs" />
+    <Compile Include="Models\NetworkConnection.cs" />
+    <Compile Include="Views\BarcodeUpca.cs" />
+    <Compile Include="Views\cDeactivateStation.cs" />
+    <Compile Include="Models\modelShipmentFilter.cs" />
+    <Compile Include="Models\modeUserFilter.cs" />
+    <Compile Include="Models\Obj.cs" />
+    <Compile Include="Views\cSlipInfo.cs" />
+    <Compile Include="Views\cstDspErrorLog.cs" />
+    <Compile Include="Views\cstHomePageGv.cs" />
+    <Compile Include="Views\cstShipmentInformationAll.cs" />
+    <Compile Include="Forms\Master Forms\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Master Forms\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Master Forms\Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Master Forms\Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Global.cs" />
+    <Compile Include="Views\ImpersonatedUser.cs" />
+    <Compile Include="Views\NetworkDrive.cs" />
+    <Compile Include="Views\PackingStat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\PopupValue.cs" />
+    <Compile Include="Views\ReasonList.cs" />
+    <Compile Include="Views\ReasonSelectionsPopup.cs" />
+    <Compile Include="Views\UPCA.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Forms\Master Forms\Home.Master" />
+    <Content Include="Forms\Master Forms\Admin.Master" />
+    <Content Include="packages.config" />
+    <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
+    <Content Include="Forms\Master Forms\TestUser.Master" />
+    <None Include="Properties\PublishProfiles\IIS.pubxml" />
+    <None Include="Properties\PublishProfiles\ShipmentComptroller.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_GlobalResources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PackingIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1540</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/ShippingController(V1.0)</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:44036/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

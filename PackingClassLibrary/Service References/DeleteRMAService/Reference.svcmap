@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="151910a9-66f6-4834-94ed-15564ba8a3e7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Delete.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KrausWarehouseServices.xsd" MetadataType="Schema" ID="1444f6fa-898e-44f1-add0-c0902bb51e14" SourceId="1" SourceUrl="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Delete.svc?xsd=xsd1" />
+    <MetadataFile FileName="KrausWarehouseServices.disco" MetadataType="Disco" ID="3f568b9a-5ad9-4fd0-b34b-e798f2768b85" SourceId="1" SourceUrl="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Delete.svc?disco" />
+    <MetadataFile FileName="KrausWarehouseServices1.xsd" MetadataType="Schema" ID="6a6ec6e3-db6a-4171-a32e-2508e03e1a56" SourceId="1" SourceUrl="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Delete.svc?xsd=xsd0" />
+    <MetadataFile FileName="Delete.wsdl" MetadataType="Wsdl" ID="f4559fb3-e16f-4bac-a790-4866ded479ad" SourceId="1" SourceUrl="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Delete.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

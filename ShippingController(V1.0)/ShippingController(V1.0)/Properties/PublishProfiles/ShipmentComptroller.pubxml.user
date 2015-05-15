@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAj1d+HlYtBE25DcLuUjAQTQAAAAACAAAAAAAQZgAAAAEAACAAAACOVhu+ynerlodvRSCBUAisj9uHRaPUyFObk+nfgeaJdgAAAAAOgAAAAAIAACAAAAAmbtQrTddylhcMyxL6jT8VJ8ncyJVAHMvOxvuMIlMBZRAAAAB8qfajxjWxIxH00ZXmLMR9QAAAAB9TxBrZFZXNYJ+zzVKeCSkU1JShIs4rt6wm86YNE44HZSw3MSo1lN/76Iy1EU6TsLm7VZvdJghxOicivdVapHw=</EncryptedPassword>
+    <_PublishTargetUrl>D:\Shipping Deploy</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="3.jpg">
+      <publishTime>10/31/2014 17:28:23</publishTime>
+    </File>
+    <File Include="App_Readme/Ext.NET.Utilities/BREAKING_CHANGES.txt">
+      <publishTime>08/26/2014 07:41:21</publishTime>
+    </File>
+    <File Include="App_Readme/Ext.NET.Utilities/LICENSE.txt">
+      <publishTime>08/26/2014 07:41:21</publishTime>
+    </File>
+    <File Include="App_Readme/Ext.NET.Utilities/README.txt">
+      <publishTime>08/26/2014 07:41:21</publishTime>
+    </File>
+    <File Include="App_Readme/Ext.NET/BREAKING_CHANGES.txt">
+      <publishTime>08/26/2014 07:41:38</publishTime>
+    </File>
+    <File Include="App_Readme/Ext.NET/CHANGELOG.txt">
+      <publishTime>08/26/2014 07:41:38</publishTime>
+    </File>
+    <File Include="App_Readme/Ext.NET/LICENSE.txt">
+      <publishTime>08/26/2014 07:41:38</publishTime>
+    </File>
+    <File Include="App_Readme/Ext.NET/README.txt">
+      <publishTime>08/26/2014 07:41:38</publishTime>
+    </File>
+    <File Include="App_Readme/Ext.NET/Sample.Web.config">
+      <publishTime>08/26/2014 07:41:38</publishTime>
+    </File>
+    <File Include="App_Readme/Transformer.NET/LICENSE.txt">
+      <publishTime>08/26/2014 07:41:22</publishTime>
+    </File>
+    <File Include="App_Readme/Transformer.NET/README.txt">
+      <publishTime>08/26/2014 07:41:22</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="bin/DotNet.Highcharts.dll">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>01/30/2014 06:59:26</publishTime>
+    </File>
+    <File Include="bin/Ext.Net.dll">
+      <publishTime>08/26/2014 07:41:14</publishTime>
+    </File>
+    <File Include="bin/Ext.Net.Utilities.dll">
+      <publishTime>08/26/2014 07:41:08</publishTime>
+    </File>
+    <File Include="bin/Ionic.Zip.Reduced.dll">
+      <publishTime>09/26/2014 09:02:24</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="bin/KeepAutomation.Barcode.Web.dll">
+      <publishTime>09/13/2014 06:50:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>08/26/2014 07:41:09</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/26/2014 07:41:08</publishTime>
+    </File>
+    <File Include="bin/PackingClassLibrary.dll">
+      <publishTime>05/11/2015 09:40:10</publishTime>
+    </File>
+    <File Include="bin/ShippingController%28V1.0%29.dll">
+      <publishTime>05/11/2015 09:41:09</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/09/2013 11:04:48</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>07/09/2013 11:04:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>07/09/2013 11:04:28</publishTime>
+    </File>
+    <File Include="bin/Themes/CSS/BlackCoffeeCSS.css">
+      <publishTime>10/07/2013 22:16:15</publishTime>
+    </File>
+    <File Include="bin/Themes/CSS/ddsmoothmenu.css">
+      <publishTime>07/10/2013 10:12:16</publishTime>
+    </File>
+    <File Include="bin/Transformer.NET.dll">
+      <publishTime>08/26/2014 07:41:08</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>08/26/2014 07:41:09</publishTime>
+    </File>
+    <File Include="bin/WPFToolkit.Extended.dll">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="Ext.NET.Default.aspx">
+      <publishTime>08/26/2014 08:01:52</publishTime>
+    </File>
+    <File Include="Forms/Master Forms/Admin.Master">
+      <publishTime>04/29/2015 16:14:06</publishTime>
+    </File>
+    <File Include="Forms/Master Forms/Home.Master">
+      <publishTime>09/06/2014 03:55:06</publishTime>
+    </File>
+    <File Include="Forms/Master Forms/TestUser.Master">
+      <publishTime>04/14/2015 20:42:59</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/AutoCompleteService.aspx">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/DemoGrid.aspx">
+      <publishTime>04/14/2015 14:42:41</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/DemoSearch.aspx">
+      <publishTime>08/27/2014 17:31:42</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/DownLoadImages.aspx">
+      <publishTime>09/26/2014 08:27:12</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/Excel.xsl">
+      <publishTime>03/31/2015 09:09:33</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmChart.aspx">
+      <publishTime>09/26/2014 13:08:40</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmDisableStation.aspx">
+      <publishTime>09/26/2014 12:24:44</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmErrorLog.aspx">
+      <publishTime>09/26/2014 13:03:08</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmHomePage.aspx">
+      <publishTime>10/31/2014 13:59:43</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmLogin.aspx">
+      <publishTime>11/17/2014 10:27:20</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmPopup.aspx">
+      <publishTime>04/11/2014 06:59:03</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmPopupForEditRMAReasons.aspx">
+      <publishTime>04/11/2014 06:59:03</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmRetunDetail.aspx">
+      <publishTime>09/26/2014 11:55:51</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmReturnEdit.aspx">
+      <publishTime>04/29/2015 16:13:42</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmRGAReasons.aspx">
+      <publishTime>02/03/2014 17:25:42</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmRMAConfig.aspx">
+      <publishTime>09/26/2014 12:03:22</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmRMAEnter.aspx">
+      <publishTime>04/14/2015 16:29:17</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmRMAEnterWithPO.aspx">
+      <publishTime>04/14/2015 18:02:28</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmRMAFormPrint2.aspx">
+      <publishTime>09/03/2014 17:22:54</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmRMAPopup.aspx">
+      <publishTime>09/15/2014 09:46:02</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmRoles.aspx">
+      <publishTime>09/26/2014 12:58:27</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmShipmentInfoDetails.aspx">
+      <publishTime>03/30/2015 13:06:54</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmShipmentInformation.aspx">
+      <publishTime>04/03/2015 12:15:51</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmShippingInfo.aspx">
+      <publishTime>09/26/2014 12:05:56</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmSlipPrint.aspx">
+      <publishTime>09/17/2014 17:26:53</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmSRNumber.aspx">
+      <publishTime>04/14/2015 18:02:47</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmStationDashBoard.aspx">
+      <publishTime>09/26/2014 12:00:29</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmStations.aspx">
+      <publishTime>09/26/2014 11:52:39</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmTrackShipment.aspx">
+      <publishTime>09/26/2014 12:05:56</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmUserDetails.aspx">
+      <publishTime>04/11/2014 13:40:47</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/frmUserInformation.aspx">
+      <publishTime>09/26/2014 12:05:56</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/ImageServer.aspx">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/ImageShow.aspx">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Forms/Web Forms/rptPacking.aspx">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="images/KRAUSGRA17Dec2013_08_43_07578_PM.jpeg">
+      <publishTime>01/30/2014 17:28:22</publishTime>
+    </File>
+    <File Include="images/Printer-icon.png">
+      <publishTime>08/19/2014 13:53:29</publishTime>
+    </File>
+    <File Include="images/RedFlag.jpg">
+      <publishTime>09/15/2014 17:52:17</publishTime>
+    </File>
+    <File Include="images/Red_flag.png">
+      <publishTime>08/23/2014 13:20:02</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/26/2014 07:41:38</publishTime>
+    </File>
+    <File Include="PackingIcon.ico">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/CSS/BlackCoffeeCSS.css">
+      <publishTime>12/05/2014 10:05:44</publishTime>
+    </File>
+    <File Include="Themes/CSS/ddsmoothmenu.css">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/CSS/MenuBar.css">
+      <publishTime>02/27/2015 11:49:56</publishTime>
+    </File>
+    <File Include="Themes/Images/ad.jpg">
+      <publishTime>09/18/2014 05:34:35</publishTime>
+    </File>
+    <File Include="Themes/Images/admin.jpg">
+      <publishTime>09/18/2014 04:05:26</publishTime>
+    </File>
+    <File Include="Themes/Images/Arrow.gif">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/Images/close.jpg">
+      <publishTime>08/25/2014 13:16:03</publishTime>
+    </File>
+    <File Include="Themes/Images/delete-xxl.png">
+      <publishTime>11/25/2014 04:51:20</publishTime>
+    </File>
+    <File Include="Themes/Images/document-print.png">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/Images/ExcelIcon.png">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/Images/excel_icon.png">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/Images/image-not-found.gif">
+      <publishTime>12/26/2013 20:10:39</publishTime>
+    </File>
+    <File Include="Themes/Images/k.png">
+      <publishTime>09/02/2014 11:30:10</publishTime>
+    </File>
+    <File Include="Themes/Images/loading83.gif">
+      <publishTime>10/14/2014 16:03:42</publishTime>
+    </File>
+    <File Include="Themes/Images/logoKraus.png">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/Images/main-bg.jpg">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/Images/progress.gif">
+      <publishTime>09/18/2014 15:44:52</publishTime>
+    </File>
+    <File Include="Themes/Images/Search.png">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/Images/UserIcon.png">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/Images/water9 %281%29.jpg">
+      <publishTime>09/02/2014 11:30:10</publishTime>
+    </File>
+    <File Include="Themes/Images/water9.jpg">
+      <publishTime>09/02/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Themes/js/highcharts.js">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/js/jquery-1.5.1.min.js">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="Themes/js/jquery.min.js">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="TreeLineImages/dash.gif">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="TreeLineImages/dashminus.gif">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="TreeLineImages/dashplus.gif">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="TreeLineImages/i.gif">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="TreeLineImages/l.gif">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="TreeLineImages/lminus.gif">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="TreeLineImages/lplus.gif">
+      <publishTime>01/30/2014 06:58:21</publishTime>
+    </File>
+    <File Include="TreeLineImages/minus.gif">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="TreeLineImages/noexpand.gif">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="TreeLineImages/plus.gif">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="TreeLineImages/r.gif">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="TreeLineImages/rminus.gif">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="TreeLineImages/rplus.gif">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="TreeLineImages/t.gif">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="TreeLineImages/tminus.gif">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="TreeLineImages/tplus.gif">
+      <publishTime>01/30/2014 06:58:22</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/11/2015 09:41:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

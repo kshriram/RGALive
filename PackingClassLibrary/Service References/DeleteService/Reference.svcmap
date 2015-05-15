@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="21d865b6-5dc1-48d2-a39e-eccf8e499e2a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Delete.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KrausWarehouseServices.xsd" MetadataType="Schema" ID="7d597d1e-798e-4db1-ae5d-6b480e8e14ba" SourceId="1" SourceUrl="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Delete.svc?xsd=xsd1" />
+    <MetadataFile FileName="Delete.wsdl" MetadataType="Wsdl" ID="f8ee7dd6-45ef-4ff5-8851-0b61e568b991" SourceId="1" SourceUrl="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Delete.svc?wsdl" />
+    <MetadataFile FileName="KrausWarehouseServices.disco" MetadataType="Disco" ID="cd646837-c1b9-4765-95d9-ac3a1efd18a0" SourceId="1" SourceUrl="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Delete.svc?disco" />
+    <MetadataFile FileName="KrausWarehouseServices1.xsd" MetadataType="Schema" ID="f97d5f32-49ba-4dc5-9d34-834811840d88" SourceId="1" SourceUrl="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Delete.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

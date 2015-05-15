@@ -1,0 +1,1732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Get" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Get.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Get.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Get.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/KrausWarehouseServices.DTO.Shipping" />
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Get.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/KrausWarehouseServices.DTO.RMA" />
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Get.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGet_XMLUserGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:XMLUserGet" />
+  </wsdl:message>
+  <wsdl:message name="IGet_XMLUserGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XMLUserGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserAll" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByRoleID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserByRoleID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByRoleID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserByRoleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserByUserName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_XMLReturnGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:XMLReturnGet" />
+  </wsdl:message>
+  <wsdl:message name="IGet_XMLReturnGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XMLReturnGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnAll" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByReturnID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByReturnID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByReturnID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByReturnIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetSKUReasonandPointsByReturnID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSKUReasonandPointsByReturnID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetSKUReasonandPointsByReturnID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSKUReasonandPointsByReturnIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetSKUReasonandPointsByReturnDetailID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSKUReasonandPointsByReturnDetailID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetSKUReasonandPointsByReturnDetailID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSKUReasonandPointsByReturnDetailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByReturnDetailID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByReturnDetailID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByReturnDetailID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByReturnDetailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByRMANumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByRMANumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByRMANumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByRMANumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByOrderNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByOrderNum" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByOrderNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByOrderNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByVendoeNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByVendoeNum" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByVendoeNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByVendoeNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByVendorName_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByVendorName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByVendorName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByVendorNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByShipmentNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByShipmentNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByShipmentNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByShipmentNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByPONumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByPONumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByPONumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByPONumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByRGAROWID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByRGAROWID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByRGAROWID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByRGAROWIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByRGADROWID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByRGADROWID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByRGADROWID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByRGADROWIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnTodaysinstring_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnTodaysinstring" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnTodaysinstring_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnTodaysinstringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnPending_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnPending" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnPending_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnPendingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnAllString_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnAllString" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnAllString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnAllStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetRetrunDetailByReturnIDforTrackingSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetrunDetailByReturnIDforTrackingSearch" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetRetrunDetailByReturnIDforTrackingSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetrunDetailByReturnIDforTrackingSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByFromDateToDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByFromDateToDate" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnByFromDateToDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnByFromDateToDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnDetailAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnDetailAll" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnDetailAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnDetailAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnDetailByretrnID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnDetailByretrnID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnDetailByretrnID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnDetailByretrnIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnDetailByRetundetailID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnDetailByRetundetailID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnDetailByRetundetailID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnDetailByRetundetailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnDetailByRGADROWID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnDetailByRGADROWID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnDetailByRGADROWID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnDetailByRGADROWIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnDetailByRGAROWID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnDetailByRGAROWID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReturnDetailByRGAROWID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnDetailByRGAROWIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetTrackingNumbersInReturnDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrackingNumbersInReturnDetails" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetTrackingNumbersInReturnDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrackingNumbersInReturnDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetRetrunDetailByTextforTrackingSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetrunDetailByTextforTrackingSearch" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetRetrunDetailByTextforTrackingSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetrunDetailByTextforTrackingSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReasonsAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReasonsAll" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReasonsAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReasonsAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReasonByCategoryName_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReasonByCategoryName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReasonByCategoryName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReasonByCategoryNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ListOfReasons_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListOfReasons" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ListOfReasons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListOfReasonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReasonsByReturnDetailID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReasonsByReturnDetailID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ReasonsByReturnDetailID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReasonsByReturnDetailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_AuditAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuditAll" />
+  </wsdl:message>
+  <wsdl:message name="IGet_AuditAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuditAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RMAInfoByShippingNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:RMAInfoByShippingNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RMAInfoByShippingNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RMAInfoByShippingNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RMAInfoBySONumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:RMAInfoBySONumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RMAInfoBySONumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RMAInfoBySONumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RMAInfoByPONumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:RMAInfoByPONumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RMAInfoByPONumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RMAInfoByPONumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_NewRMAInfoByOnlyPONumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewRMAInfoByOnlyPONumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_NewRMAInfoByOnlyPONumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewRMAInfoByOnlyPONumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RMAInfoByPONUmberwithSRNUmber_InputMessage">
+    <wsdl:part name="parameters" element="tns:RMAInfoByPONUmberwithSRNUmber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RMAInfoByPONUmberwithSRNUmber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RMAInfoByPONUmberwithSRNUmberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RMAInfoBySRNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:RMAInfoBySRNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RMAInfoBySRNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RMAInfoBySRNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ProductMachingNameCat_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductMachingNameCat" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ProductMachingNameCat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductMachingNameCatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetEANCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEANCode" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetEANCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEANCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetProductName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetProductName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetProductNameAndProductID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameAndProductID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetProductNameAndProductID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNameAndProductIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPrintReasonFromSage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrintReasonFromSage" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPrintReasonFromSage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrintReasonFromSageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetCustomerByPOnumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerByPOnumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetCustomerByPOnumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerByPOnumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPOnumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPOnumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPOnumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPOnumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetVenderName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenderName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetVenderName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenderNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetGetVenderNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGetVenderNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetGetVenderNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGetVenderNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetVenderNameByVenderNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenderNameByVenderNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetVenderNameByVenderNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenderNameByVenderNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetVenderNumberByVenderName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenderNumberByVenderName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetVenderNumberByVenderName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVenderNumberByVenderNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RoleAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleAll" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RoleAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RoleByRoleID_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleByRoleID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RoleByRoleID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleByRoleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ImagePathTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImagePathTable" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ImagePathTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImagePathTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ImagePathStringList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImagePathStringList" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ImagePathStringList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImagePathStringListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_Authenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="IGet_Authenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetRMALatestVersionNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRMALatestVersionNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetRMALatestVersionNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRMALatestVersionNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetSKUImagesByReturnDetailID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSKUImagesByReturnDetailID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetSKUImagesByReturnDetailID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSKUImagesByReturnDetailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CategotyReasonNameByReasonID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CategotyReasonNameByReasonID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CategotyReasonNameByReasonID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CategotyReasonNameByReasonIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CategotyReasonAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:CategotyReasonAll" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CategotyReasonAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CategotyReasonAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetRMAComments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRMAComments" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetRMAComments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRMACommentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_filenames_InputMessage">
+    <wsdl:part name="parameters" element="tns:filenames" />
+  </wsdl:message>
+  <wsdl:message name="IGet_filenames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:filenamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetfileData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetfileData" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetfileData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetfileDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_fileDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:fileDelete" />
+  </wsdl:message>
+  <wsdl:message name="IGet_fileDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fileDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_sample_InputMessage">
+    <wsdl:part name="parameters" element="tns:sample" />
+  </wsdl:message>
+  <wsdl:message name="IGet_sample_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sampleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_MoveFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveFiles" />
+  </wsdl:message>
+  <wsdl:message name="IGet_MoveFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_Moves850MultiFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:Moves850MultiFiles" />
+  </wsdl:message>
+  <wsdl:message name="IGet_Moves850MultiFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Moves850MultiFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileNames850archive_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileNames850archive" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileNames850archive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileNames850archiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileDataFrom850archive_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileDataFrom850archive" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileDataFrom850archive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileDataFrom850archiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileDataFrom856Export_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileDataFrom856Export" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileDataFrom856Export_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileDataFrom856ExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FilesNameFrom856Export_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilesNameFrom856Export" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FilesNameFrom856Export_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilesNameFrom856ExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateOutFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOutFiles" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateOutFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOutFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateHomeDepotFilesFrom850_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateHomeDepotFilesFrom850" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateHomeDepotFilesFrom850_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateHomeDepotFilesFrom850Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateHomeDepotFilesFrom856_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateHomeDepotFilesFrom856" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateHomeDepotFilesFrom856_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateHomeDepotFilesFrom856Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileDataFromHomeDepot850_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileDataFromHomeDepot850" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileDataFromHomeDepot850_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileDataFromHomeDepot850Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileDataFromHomeDepot856_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileDataFromHomeDepot856" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileDataFromHomeDepot856_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileDataFromHomeDepot856Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FilenamesFromHomeDepot850_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilenamesFromHomeDepot850" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FilenamesFromHomeDepot850_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilenamesFromHomeDepot850Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FilenamesFromHomeDepot856_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilenamesFromHomeDepot856" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FilenamesFromHomeDepot856_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilenamesFromHomeDepot856Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateOverwriteOriginalFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOverwriteOriginalFile" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateOverwriteOriginalFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOverwriteOriginalFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_Overwrite856HomeDepotFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:Overwrite856HomeDepotFile" />
+  </wsdl:message>
+  <wsdl:message name="IGet_Overwrite856HomeDepotFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Overwrite856HomeDepotFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_MovesFilesToTC_InputMessage">
+    <wsdl:part name="parameters" element="tns:MovesFilesToTC" />
+  </wsdl:message>
+  <wsdl:message name="IGet_MovesFilesToTC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MovesFilesToTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_MoveSingleTrackingFilesToTC_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveSingleTrackingFilesToTC" />
+  </wsdl:message>
+  <wsdl:message name="IGet_MoveSingleTrackingFilesToTC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveSingleTrackingFilesToTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateAndMoveTrackingFileToTC_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAndMoveTrackingFileToTC" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateAndMoveTrackingFileToTC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAndMoveTrackingFileToTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FilesNameFrom856ExportTCOutboxError_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilesNameFrom856ExportTCOutboxError" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FilesNameFrom856ExportTCOutboxError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilesNameFrom856ExportTCOutboxErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_MoveFilesFromTCOErrToMenardErr_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveFilesFromTCOErrToMenardErr" />
+  </wsdl:message>
+  <wsdl:message name="IGet_MoveFilesFromTCOErrToMenardErr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveFilesFromTCOErrToMenardErrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileDataFrom856exportTCOutboxError_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileDataFrom856exportTCOutboxError" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FileDataFrom856exportTCOutboxError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileDataFrom856exportTCOutboxErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateFilesFrom856ExportTCOutboxError_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFilesFrom856ExportTCOutboxError" />
+  </wsdl:message>
+  <wsdl:message name="IGet_CreateFilesFrom856ExportTCOutboxError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFilesFrom856ExportTCOutboxErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FilesNameFromMenardExportTCOutboxError_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilesNameFromMenardExportTCOutboxError" />
+  </wsdl:message>
+  <wsdl:message name="IGet_FilesNameFromMenardExportTCOutboxError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilesNameFromMenardExportTCOutboxErrorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGet">
+    <wsdl:operation name="XMLUserGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/XMLUserGet" message="tns:IGet_XMLUserGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/XMLUserGetResponse" message="tns:IGet_XMLUserGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserAll" message="tns:IGet_UserAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserAllResponse" message="tns:IGet_UserAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserByUserID" message="tns:IGet_UserByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserByUserIDResponse" message="tns:IGet_UserByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserByRoleID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserByRoleID" message="tns:IGet_UserByRoleID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserByRoleIDResponse" message="tns:IGet_UserByRoleID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserByUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserByUserName" message="tns:IGet_UserByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserByUserNameResponse" message="tns:IGet_UserByUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XMLReturnGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/XMLReturnGet" message="tns:IGet_XMLReturnGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/XMLReturnGetResponse" message="tns:IGet_XMLReturnGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnAll" message="tns:IGet_ReturnAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnAllResponse" message="tns:IGet_ReturnAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByReturnID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByReturnID" message="tns:IGet_ReturnByReturnID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByReturnIDResponse" message="tns:IGet_ReturnByReturnID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSKUReasonandPointsByReturnID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetSKUReasonandPointsByReturnID" message="tns:IGet_GetSKUReasonandPointsByReturnID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetSKUReasonandPointsByReturnIDResponse" message="tns:IGet_GetSKUReasonandPointsByReturnID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSKUReasonandPointsByReturnDetailID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetSKUReasonandPointsByReturnDetailID" message="tns:IGet_GetSKUReasonandPointsByReturnDetailID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetSKUReasonandPointsByReturnDetailIDResponse" message="tns:IGet_GetSKUReasonandPointsByReturnDetailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByReturnDetailID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByReturnDetailID" message="tns:IGet_ReturnByReturnDetailID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByReturnDetailIDResponse" message="tns:IGet_ReturnByReturnDetailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByRMANumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByRMANumber" message="tns:IGet_ReturnByRMANumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByRMANumberResponse" message="tns:IGet_ReturnByRMANumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByOrderNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByOrderNum" message="tns:IGet_ReturnByOrderNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByOrderNumResponse" message="tns:IGet_ReturnByOrderNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByVendoeNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByVendoeNum" message="tns:IGet_ReturnByVendoeNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByVendoeNumResponse" message="tns:IGet_ReturnByVendoeNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByVendorName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByVendorName" message="tns:IGet_ReturnByVendorName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByVendorNameResponse" message="tns:IGet_ReturnByVendorName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByShipmentNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByShipmentNumber" message="tns:IGet_ReturnByShipmentNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByShipmentNumberResponse" message="tns:IGet_ReturnByShipmentNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByPONumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByPONumber" message="tns:IGet_ReturnByPONumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByPONumberResponse" message="tns:IGet_ReturnByPONumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByRGAROWID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByRGAROWID" message="tns:IGet_ReturnByRGAROWID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByRGAROWIDResponse" message="tns:IGet_ReturnByRGAROWID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByRGADROWID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByRGADROWID" message="tns:IGet_ReturnByRGADROWID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByRGADROWIDResponse" message="tns:IGet_ReturnByRGADROWID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnTodaysinstring">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnTodaysinstring" message="tns:IGet_ReturnTodaysinstring_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnTodaysinstringResponse" message="tns:IGet_ReturnTodaysinstring_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnPending">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnPending" message="tns:IGet_ReturnPending_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnPendingResponse" message="tns:IGet_ReturnPending_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnAllString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnAllString" message="tns:IGet_ReturnAllString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnAllStringResponse" message="tns:IGet_ReturnAllString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRetrunDetailByReturnIDforTrackingSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetRetrunDetailByReturnIDforTrackingSearch" message="tns:IGet_GetRetrunDetailByReturnIDforTrackingSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetRetrunDetailByReturnIDforTrackingSearchResponse" message="tns:IGet_GetRetrunDetailByReturnIDforTrackingSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByFromDateToDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnByFromDateToDate" message="tns:IGet_ReturnByFromDateToDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnByFromDateToDateResponse" message="tns:IGet_ReturnByFromDateToDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDetailAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnDetailAll" message="tns:IGet_ReturnDetailAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnDetailAllResponse" message="tns:IGet_ReturnDetailAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDetailByretrnID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnDetailByretrnID" message="tns:IGet_ReturnDetailByretrnID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnDetailByretrnIDResponse" message="tns:IGet_ReturnDetailByretrnID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDetailByRetundetailID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnDetailByRetundetailID" message="tns:IGet_ReturnDetailByRetundetailID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnDetailByRetundetailIDResponse" message="tns:IGet_ReturnDetailByRetundetailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDetailByRGADROWID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnDetailByRGADROWID" message="tns:IGet_ReturnDetailByRGADROWID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnDetailByRGADROWIDResponse" message="tns:IGet_ReturnDetailByRGADROWID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDetailByRGAROWID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReturnDetailByRGAROWID" message="tns:IGet_ReturnDetailByRGAROWID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReturnDetailByRGAROWIDResponse" message="tns:IGet_ReturnDetailByRGAROWID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrackingNumbersInReturnDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetTrackingNumbersInReturnDetails" message="tns:IGet_GetTrackingNumbersInReturnDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetTrackingNumbersInReturnDetailsResponse" message="tns:IGet_GetTrackingNumbersInReturnDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRetrunDetailByTextforTrackingSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetRetrunDetailByTextforTrackingSearch" message="tns:IGet_GetRetrunDetailByTextforTrackingSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetRetrunDetailByTextforTrackingSearchResponse" message="tns:IGet_GetRetrunDetailByTextforTrackingSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReasonsAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReasonsAll" message="tns:IGet_ReasonsAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReasonsAllResponse" message="tns:IGet_ReasonsAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReasonByCategoryName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReasonByCategoryName" message="tns:IGet_ReasonByCategoryName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReasonByCategoryNameResponse" message="tns:IGet_ReasonByCategoryName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListOfReasons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ListOfReasons" message="tns:IGet_ListOfReasons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ListOfReasonsResponse" message="tns:IGet_ListOfReasons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReasonsByReturnDetailID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ReasonsByReturnDetailID" message="tns:IGet_ReasonsByReturnDetailID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ReasonsByReturnDetailIDResponse" message="tns:IGet_ReasonsByReturnDetailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/AuditAll" message="tns:IGet_AuditAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/AuditAllResponse" message="tns:IGet_AuditAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RMAInfoByShippingNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/RMAInfoByShippingNumber" message="tns:IGet_RMAInfoByShippingNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/RMAInfoByShippingNumberResponse" message="tns:IGet_RMAInfoByShippingNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RMAInfoBySONumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/RMAInfoBySONumber" message="tns:IGet_RMAInfoBySONumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/RMAInfoBySONumberResponse" message="tns:IGet_RMAInfoBySONumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RMAInfoByPONumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/RMAInfoByPONumber" message="tns:IGet_RMAInfoByPONumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/RMAInfoByPONumberResponse" message="tns:IGet_RMAInfoByPONumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewRMAInfoByOnlyPONumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/NewRMAInfoByOnlyPONumber" message="tns:IGet_NewRMAInfoByOnlyPONumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/NewRMAInfoByOnlyPONumberResponse" message="tns:IGet_NewRMAInfoByOnlyPONumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RMAInfoByPONUmberwithSRNUmber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/RMAInfoByPONUmberwithSRNUmber" message="tns:IGet_RMAInfoByPONUmberwithSRNUmber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/RMAInfoByPONUmberwithSRNUmberResponse" message="tns:IGet_RMAInfoByPONUmberwithSRNUmber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RMAInfoBySRNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/RMAInfoBySRNumber" message="tns:IGet_RMAInfoBySRNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/RMAInfoBySRNumberResponse" message="tns:IGet_RMAInfoBySRNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductMachingNameCat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ProductMachingNameCat" message="tns:IGet_ProductMachingNameCat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ProductMachingNameCatResponse" message="tns:IGet_ProductMachingNameCat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEANCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetEANCode" message="tns:IGet_GetEANCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetEANCodeResponse" message="tns:IGet_GetEANCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetProductName" message="tns:IGet_GetProductName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetProductNameResponse" message="tns:IGet_GetProductName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameAndProductID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetProductNameAndProductID" message="tns:IGet_GetProductNameAndProductID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetProductNameAndProductIDResponse" message="tns:IGet_GetProductNameAndProductID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrintReasonFromSage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPrintReasonFromSage" message="tns:IGet_GetPrintReasonFromSage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPrintReasonFromSageResponse" message="tns:IGet_GetPrintReasonFromSage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerByPOnumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetCustomerByPOnumber" message="tns:IGet_GetCustomerByPOnumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetCustomerByPOnumberResponse" message="tns:IGet_GetCustomerByPOnumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOnumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPOnumber" message="tns:IGet_GetPOnumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPOnumberResponse" message="tns:IGet_GetPOnumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenderName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetVenderName" message="tns:IGet_GetVenderName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetVenderNameResponse" message="tns:IGet_GetVenderName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGetVenderNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetGetVenderNumber" message="tns:IGet_GetGetVenderNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetGetVenderNumberResponse" message="tns:IGet_GetGetVenderNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenderNameByVenderNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetVenderNameByVenderNumber" message="tns:IGet_GetVenderNameByVenderNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetVenderNameByVenderNumberResponse" message="tns:IGet_GetVenderNameByVenderNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenderNumberByVenderName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetVenderNumberByVenderName" message="tns:IGet_GetVenderNumberByVenderName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetVenderNumberByVenderNameResponse" message="tns:IGet_GetVenderNumberByVenderName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/RoleAll" message="tns:IGet_RoleAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/RoleAllResponse" message="tns:IGet_RoleAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleByRoleID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/RoleByRoleID" message="tns:IGet_RoleByRoleID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/RoleByRoleIDResponse" message="tns:IGet_RoleByRoleID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImagePathTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ImagePathTable" message="tns:IGet_ImagePathTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ImagePathTableResponse" message="tns:IGet_ImagePathTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImagePathStringList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ImagePathStringList" message="tns:IGet_ImagePathStringList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ImagePathStringListResponse" message="tns:IGet_ImagePathStringList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/Authenticate" message="tns:IGet_Authenticate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/AuthenticateResponse" message="tns:IGet_Authenticate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRMALatestVersionNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetRMALatestVersionNumber" message="tns:IGet_GetRMALatestVersionNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetRMALatestVersionNumberResponse" message="tns:IGet_GetRMALatestVersionNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSKUImagesByReturnDetailID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetSKUImagesByReturnDetailID" message="tns:IGet_GetSKUImagesByReturnDetailID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetSKUImagesByReturnDetailIDResponse" message="tns:IGet_GetSKUImagesByReturnDetailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CategotyReasonNameByReasonID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/CategotyReasonNameByReasonID" message="tns:IGet_CategotyReasonNameByReasonID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/CategotyReasonNameByReasonIDResponse" message="tns:IGet_CategotyReasonNameByReasonID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CategotyReasonAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/CategotyReasonAll" message="tns:IGet_CategotyReasonAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/CategotyReasonAllResponse" message="tns:IGet_CategotyReasonAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRMAComments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetRMAComments" message="tns:IGet_GetRMAComments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetRMACommentsResponse" message="tns:IGet_GetRMAComments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="filenames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/filenames" message="tns:IGet_filenames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/filenamesResponse" message="tns:IGet_filenames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetfileData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetfileData" message="tns:IGet_GetfileData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetfileDataResponse" message="tns:IGet_GetfileData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fileDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/fileDelete" message="tns:IGet_fileDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/fileDeleteResponse" message="tns:IGet_fileDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sample">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/sample" message="tns:IGet_sample_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/sampleResponse" message="tns:IGet_sample_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/MoveFiles" message="tns:IGet_MoveFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/MoveFilesResponse" message="tns:IGet_MoveFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Moves850MultiFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/Moves850MultiFiles" message="tns:IGet_Moves850MultiFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/Moves850MultiFilesResponse" message="tns:IGet_Moves850MultiFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileNames850archive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FileNames850archive" message="tns:IGet_FileNames850archive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FileNames850archiveResponse" message="tns:IGet_FileNames850archive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileDataFrom850archive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FileDataFrom850archive" message="tns:IGet_FileDataFrom850archive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FileDataFrom850archiveResponse" message="tns:IGet_FileDataFrom850archive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileDataFrom856Export">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FileDataFrom856Export" message="tns:IGet_FileDataFrom856Export_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FileDataFrom856ExportResponse" message="tns:IGet_FileDataFrom856Export_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilesNameFrom856Export">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FilesNameFrom856Export" message="tns:IGet_FilesNameFrom856Export_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FilesNameFrom856ExportResponse" message="tns:IGet_FilesNameFrom856Export_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOutFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/CreateOutFiles" message="tns:IGet_CreateOutFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/CreateOutFilesResponse" message="tns:IGet_CreateOutFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateHomeDepotFilesFrom850">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/CreateHomeDepotFilesFrom850" message="tns:IGet_CreateHomeDepotFilesFrom850_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/CreateHomeDepotFilesFrom850Response" message="tns:IGet_CreateHomeDepotFilesFrom850_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateHomeDepotFilesFrom856">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/CreateHomeDepotFilesFrom856" message="tns:IGet_CreateHomeDepotFilesFrom856_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/CreateHomeDepotFilesFrom856Response" message="tns:IGet_CreateHomeDepotFilesFrom856_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileDataFromHomeDepot850">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FileDataFromHomeDepot850" message="tns:IGet_FileDataFromHomeDepot850_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FileDataFromHomeDepot850Response" message="tns:IGet_FileDataFromHomeDepot850_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileDataFromHomeDepot856">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FileDataFromHomeDepot856" message="tns:IGet_FileDataFromHomeDepot856_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FileDataFromHomeDepot856Response" message="tns:IGet_FileDataFromHomeDepot856_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilenamesFromHomeDepot850">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FilenamesFromHomeDepot850" message="tns:IGet_FilenamesFromHomeDepot850_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FilenamesFromHomeDepot850Response" message="tns:IGet_FilenamesFromHomeDepot850_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilenamesFromHomeDepot856">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FilenamesFromHomeDepot856" message="tns:IGet_FilenamesFromHomeDepot856_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FilenamesFromHomeDepot856Response" message="tns:IGet_FilenamesFromHomeDepot856_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOverwriteOriginalFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/CreateOverwriteOriginalFile" message="tns:IGet_CreateOverwriteOriginalFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/CreateOverwriteOriginalFileResponse" message="tns:IGet_CreateOverwriteOriginalFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Overwrite856HomeDepotFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/Overwrite856HomeDepotFile" message="tns:IGet_Overwrite856HomeDepotFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/Overwrite856HomeDepotFileResponse" message="tns:IGet_Overwrite856HomeDepotFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MovesFilesToTC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/MovesFilesToTC" message="tns:IGet_MovesFilesToTC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/MovesFilesToTCResponse" message="tns:IGet_MovesFilesToTC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveSingleTrackingFilesToTC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/MoveSingleTrackingFilesToTC" message="tns:IGet_MoveSingleTrackingFilesToTC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/MoveSingleTrackingFilesToTCResponse" message="tns:IGet_MoveSingleTrackingFilesToTC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndMoveTrackingFileToTC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/CreateAndMoveTrackingFileToTC" message="tns:IGet_CreateAndMoveTrackingFileToTC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/CreateAndMoveTrackingFileToTCResponse" message="tns:IGet_CreateAndMoveTrackingFileToTC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilesNameFrom856ExportTCOutboxError">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FilesNameFrom856ExportTCOutboxError" message="tns:IGet_FilesNameFrom856ExportTCOutboxError_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FilesNameFrom856ExportTCOutboxErrorResponse" message="tns:IGet_FilesNameFrom856ExportTCOutboxError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFilesFromTCOErrToMenardErr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/MoveFilesFromTCOErrToMenardErr" message="tns:IGet_MoveFilesFromTCOErrToMenardErr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/MoveFilesFromTCOErrToMenardErrResponse" message="tns:IGet_MoveFilesFromTCOErrToMenardErr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileDataFrom856exportTCOutboxError">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FileDataFrom856exportTCOutboxError" message="tns:IGet_FileDataFrom856exportTCOutboxError_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FileDataFrom856exportTCOutboxErrorResponse" message="tns:IGet_FileDataFrom856exportTCOutboxError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFilesFrom856ExportTCOutboxError">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/CreateFilesFrom856ExportTCOutboxError" message="tns:IGet_CreateFilesFrom856ExportTCOutboxError_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/CreateFilesFrom856ExportTCOutboxErrorResponse" message="tns:IGet_CreateFilesFrom856ExportTCOutboxError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilesNameFromMenardExportTCOutboxError">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/FilesNameFromMenardExportTCOutboxError" message="tns:IGet_FilesNameFromMenardExportTCOutboxError_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/FilesNameFromMenardExportTCOutboxErrorResponse" message="tns:IGet_FilesNameFromMenardExportTCOutboxError_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGet" type="tns:IGet">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="XMLUserGet">
+      <soap:operation soapAction="http://tempuri.org/IGet/XMLUserGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAll">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserByUserID">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserByRoleID">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserByRoleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserByUserName">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XMLReturnGet">
+      <soap:operation soapAction="http://tempuri.org/IGet/XMLReturnGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnAll">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByReturnID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByReturnID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSKUReasonandPointsByReturnID">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetSKUReasonandPointsByReturnID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSKUReasonandPointsByReturnDetailID">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetSKUReasonandPointsByReturnDetailID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByReturnDetailID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByReturnDetailID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByRMANumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByRMANumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByOrderNum">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByOrderNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByVendoeNum">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByVendoeNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByVendorName">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByVendorName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByShipmentNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByShipmentNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByPONumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByPONumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByRGAROWID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByRGAROWID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByRGADROWID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByRGADROWID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnTodaysinstring">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnTodaysinstring" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnPending">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnPending" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnAllString">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnAllString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRetrunDetailByReturnIDforTrackingSearch">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetRetrunDetailByReturnIDforTrackingSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnByFromDateToDate">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnByFromDateToDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDetailAll">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnDetailAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDetailByretrnID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnDetailByretrnID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDetailByRetundetailID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnDetailByRetundetailID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDetailByRGADROWID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnDetailByRGADROWID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnDetailByRGAROWID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReturnDetailByRGAROWID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrackingNumbersInReturnDetails">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetTrackingNumbersInReturnDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRetrunDetailByTextforTrackingSearch">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetRetrunDetailByTextforTrackingSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReasonsAll">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReasonsAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReasonByCategoryName">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReasonByCategoryName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListOfReasons">
+      <soap:operation soapAction="http://tempuri.org/IGet/ListOfReasons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReasonsByReturnDetailID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ReasonsByReturnDetailID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditAll">
+      <soap:operation soapAction="http://tempuri.org/IGet/AuditAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RMAInfoByShippingNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/RMAInfoByShippingNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RMAInfoBySONumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/RMAInfoBySONumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RMAInfoByPONumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/RMAInfoByPONumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewRMAInfoByOnlyPONumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/NewRMAInfoByOnlyPONumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RMAInfoByPONUmberwithSRNUmber">
+      <soap:operation soapAction="http://tempuri.org/IGet/RMAInfoByPONUmberwithSRNUmber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RMAInfoBySRNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/RMAInfoBySRNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductMachingNameCat">
+      <soap:operation soapAction="http://tempuri.org/IGet/ProductMachingNameCat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEANCode">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetEANCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductName">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetProductName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNameAndProductID">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetProductNameAndProductID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrintReasonFromSage">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPrintReasonFromSage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerByPOnumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetCustomerByPOnumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOnumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPOnumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenderName">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetVenderName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGetVenderNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetGetVenderNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenderNameByVenderNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetVenderNameByVenderNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenderNumberByVenderName">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetVenderNumberByVenderName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleAll">
+      <soap:operation soapAction="http://tempuri.org/IGet/RoleAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleByRoleID">
+      <soap:operation soapAction="http://tempuri.org/IGet/RoleByRoleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImagePathTable">
+      <soap:operation soapAction="http://tempuri.org/IGet/ImagePathTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImagePathStringList">
+      <soap:operation soapAction="http://tempuri.org/IGet/ImagePathStringList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://tempuri.org/IGet/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRMALatestVersionNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetRMALatestVersionNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSKUImagesByReturnDetailID">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetSKUImagesByReturnDetailID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategotyReasonNameByReasonID">
+      <soap:operation soapAction="http://tempuri.org/IGet/CategotyReasonNameByReasonID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategotyReasonAll">
+      <soap:operation soapAction="http://tempuri.org/IGet/CategotyReasonAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRMAComments">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetRMAComments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="filenames">
+      <soap:operation soapAction="http://tempuri.org/IGet/filenames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetfileData">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetfileData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fileDelete">
+      <soap:operation soapAction="http://tempuri.org/IGet/fileDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sample">
+      <soap:operation soapAction="http://tempuri.org/IGet/sample" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFiles">
+      <soap:operation soapAction="http://tempuri.org/IGet/MoveFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Moves850MultiFiles">
+      <soap:operation soapAction="http://tempuri.org/IGet/Moves850MultiFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileNames850archive">
+      <soap:operation soapAction="http://tempuri.org/IGet/FileNames850archive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileDataFrom850archive">
+      <soap:operation soapAction="http://tempuri.org/IGet/FileDataFrom850archive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileDataFrom856Export">
+      <soap:operation soapAction="http://tempuri.org/IGet/FileDataFrom856Export" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilesNameFrom856Export">
+      <soap:operation soapAction="http://tempuri.org/IGet/FilesNameFrom856Export" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOutFiles">
+      <soap:operation soapAction="http://tempuri.org/IGet/CreateOutFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateHomeDepotFilesFrom850">
+      <soap:operation soapAction="http://tempuri.org/IGet/CreateHomeDepotFilesFrom850" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateHomeDepotFilesFrom856">
+      <soap:operation soapAction="http://tempuri.org/IGet/CreateHomeDepotFilesFrom856" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileDataFromHomeDepot850">
+      <soap:operation soapAction="http://tempuri.org/IGet/FileDataFromHomeDepot850" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileDataFromHomeDepot856">
+      <soap:operation soapAction="http://tempuri.org/IGet/FileDataFromHomeDepot856" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilenamesFromHomeDepot850">
+      <soap:operation soapAction="http://tempuri.org/IGet/FilenamesFromHomeDepot850" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilenamesFromHomeDepot856">
+      <soap:operation soapAction="http://tempuri.org/IGet/FilenamesFromHomeDepot856" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOverwriteOriginalFile">
+      <soap:operation soapAction="http://tempuri.org/IGet/CreateOverwriteOriginalFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Overwrite856HomeDepotFile">
+      <soap:operation soapAction="http://tempuri.org/IGet/Overwrite856HomeDepotFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovesFilesToTC">
+      <soap:operation soapAction="http://tempuri.org/IGet/MovesFilesToTC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveSingleTrackingFilesToTC">
+      <soap:operation soapAction="http://tempuri.org/IGet/MoveSingleTrackingFilesToTC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndMoveTrackingFileToTC">
+      <soap:operation soapAction="http://tempuri.org/IGet/CreateAndMoveTrackingFileToTC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilesNameFrom856ExportTCOutboxError">
+      <soap:operation soapAction="http://tempuri.org/IGet/FilesNameFrom856ExportTCOutboxError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFilesFromTCOErrToMenardErr">
+      <soap:operation soapAction="http://tempuri.org/IGet/MoveFilesFromTCOErrToMenardErr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileDataFrom856exportTCOutboxError">
+      <soap:operation soapAction="http://tempuri.org/IGet/FileDataFrom856exportTCOutboxError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFilesFrom856ExportTCOutboxError">
+      <soap:operation soapAction="http://tempuri.org/IGet/CreateFilesFrom856ExportTCOutboxError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilesNameFromMenardExportTCOutboxError">
+      <soap:operation soapAction="http://tempuri.org/IGet/FilesNameFromMenardExportTCOutboxError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Get">
+    <wsdl:port name="BasicHttpBinding_IGet" binding="tns:BasicHttpBinding_IGet">
+      <soap:address location="http://192.168.1.16:28/KrausWarehouseServices.Service.RMA.Get.svc/SOA" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

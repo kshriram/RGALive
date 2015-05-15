@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="ShippingController_V1._0_.Forms.Master_Forms.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <link rel="icon"  href="../../PackingIcon.ico" />
+    <link href="../../Themes/CSS/BlackCoffeeCSS.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Warehouse Command Center</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <table id="tblMain" runat="server" style="width: 100%; ">
+        <tr>
+            <td style="vertical-align: top">
+                <div>
+                    <table id="tblMainHome" runat="server" style="width: 100%">
+                        <tr>
+                            <td >
+                                <div style="border-bottom-style: double; border-bottom-width: medium; border-bottom-color: #4D8ED1" >
+                                    <table style="width: 100%">
+                                        <tr style="height: 50px; background: #4D8ED1">
+                                            <td>
+                                                <table style="width: 100%; margin: 0px auto;">
+                                                    <tr>
+                                                        <td style="width: 10%">&nbsp;<img src="../../Themes/Images/k.png" /></td>
+                                                        <td style="vertical-align: bottom;">
+                                                            <h1 style="color: whitesmoke; font-weight: 500; font-family: Arial; text-align: left; vertical-align:bottom; margin:0;"><span>Warehouse Command Center</span></h1>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="trBody" >
+                            <td>
+                                <div id="dvLeftContent" style="width: 100%; margin-top:15px; float: none; background:rgba(255, 255, 255, 0)">
+                                    <form id="form1" runat="server">
+                                        <div>
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="trFooter">
+                            <td>
+                                <div id="footer" style="border-top-style: double; border-top-width: medium; border-top-color: #0099FF">
+                                    <p>Copyright (c) 2013 Kraus USA All rights reserved. </p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

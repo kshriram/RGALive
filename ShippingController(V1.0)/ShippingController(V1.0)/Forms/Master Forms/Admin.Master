@@ -1,0 +1,514 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ShippingController_V1._0_.Forms.Master_Forms.Admin" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link href="../../Themes/CSS/BlackCoffeeCSS.css" rel="stylesheet" />
+    <link href="../../Themes/CSS/ddsmoothmenu.css" rel="stylesheet" />
+    <link href="../../Themes/CSS/MenuBar.css" rel="stylesheet" />
+    <title>Warehouse Command Center</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="../../Themes/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Themes/js/ddsmoothmenu.js"></script>
+    <link rel="icon" href="../../PackingIcon.ico" />
+
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        .modalBackground {
+            background-color: Black;
+            filter: alpha(opacity=40);
+            opacity: 0.4;
+        }
+
+        .modalPopup {
+            background-color: #FFFFFF;
+            width: 300px;
+            border: 3px solid #0DA9D0;
+        }
+
+            .modalPopup .header {
+                background-color: #2FBDF1;
+                height: 30px;
+                color: White;
+                line-height: 30px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .modalPopup .body {
+                min-height: 50px;
+                line-height: 30px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .modalPopup .footer {
+                padding: 3px;
+            }
+
+            .modalPopup .yes, .modalPopup .no {
+                height: 23px;
+                color: White;
+                line-height: 23px;
+                text-align: center;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .modalPopup .yes {
+                background-color: #2FBDF1;
+                border: 1px solid #0DA9D0;
+            }
+
+            .modalPopup .no {
+                background-color: #9F9F9F;
+                border: 1px solid #5C5C5C;
+            }
+        .auto-style1 {
+            text-align: right;
+            height: 36px;
+        }
+        .auto-style2 {
+            height: 36px;
+        }
+    </style>
+     <script type="text/javascript" >
+         function CheckRow(objRef) {
+             //Get the Row based on checkbox
+             var row = objRef.parentNode.parentNode;
+             if (objRef.checked) {
+                 //Change the gridview row color when checkbox checked change
+                 row.style.backgroundColor = "#5CADFF";
+             }
+             else {
+                 //If checkbox not checked change default row color
+                 if (row.rowIndex % 2 == 0) {
+                     //Alternating Row Color
+                     row.style.backgroundColor = "#AED6FF";
+                 }
+                 else {
+                     row.style.backgroundColor = "white";
+                 }
+             }
+             //Get the reference of GridView
+             var GridView = row.parentNode;
+             //Get all input elements in Gridview
+             var inputList = GridView.getElementsByTagName("input");
+             for (var i = 0; i < inputList.length; i++) {
+                 //The First element is the Header Checkbox
+                 var headerCheckBox = inputList[0];
+                 //Based on all or none checkboxes
+                 //are checked check/uncheck Header Checkbox
+                 var checked = true;
+                 if (inputList[i].type == "checkbox" && inputList[i]
+                                                != headerCheckBox) {
+                     if (!inputList[i].checked) {
+                         checked = false;
+                         break;
+                     }
+                 }
+             }
+             headerCheckBox.checked = checked;
+         }
+         function checkAllRow(objRef) {
+             var GridView = objRef.parentNode.parentNode.parentNode;
+             var inputList = GridView.getElementsByTagName("input");
+             for (var i = 0; i < inputList.length; i++) {
+                 //Get the Cell To find out ColumnIndex
+                 var row = inputList[i].parentNode.parentNode;
+                 if (inputList[i].type == "checkbox" && objRef
+                                                 != inputList[i]) {
+                     if (objRef.checked) {
+                         //If the header checkbox is checked
+                         //check all checkboxes
+                         //and highlight all rows
+                         row.style.backgroundColor = "#5CADFF";
+                         inputList[i].checked = true;
+                     }
+                     else {
+                         //If the header checkbox is checked
+                         //uncheck all checkboxes
+                         //and change rowcolor back to original
+                         if (row.rowIndex % 2 == 0) {
+                             //Alternating Row Color
+                             row.style.backgroundColor = "#AED6FF";
+                         }
+                         else {
+                             row.style.backgroundColor = "white";
+                         }
+                         inputList[i].checked = false;
+                     }
+                 }
+             }
+         }
+    </script>
+
+</head>
+<body>
+
+    <table id="tblMain" runat="server" style="width: 100%;">
+        <tr style="vertical-align: top;background: #4D8ED1;">
+            <td>
+                <div style="background: #4D8ED1">
+                    <table id="tblMainHome" runat="server" style="width: 100%">
+                        <tr>
+                            <td style="width:100%">
+                                <table style="height:5px;width:100%;">
+                                    <tr style="height: 30px">
+                                        <td style="width: 10%">
+                                            <img src="../../Themes/Images/k.png" onclick="location.href='frmHomePage.aspx'" style="height:52px; width: 142px;"/></td>
+                                        <td style="vertical-align: middle;">
+                                            <p style="color: whitesmoke; font-weight: 500; font-family: Arial; text-align: center; vertical-align: bottom; margin: 0;"><span style="font-weight:bold;font-size:x-large">Shipping Manager - </span><asp:Label runat="server" style="font-size: larger;font-weight: bold;" ID="lblPageName" Text="Admin Page"></asp:Label></p>
+                                        </td>
+                                        <td style="width: 15%;text-align:center;vertical-align:middle;">
+                                            <table style="width: 100%; float: right;height:100%">
+                                                <tr>
+                                                    <td class="auto-style1" style="text-align:center;vertical-align:middle;">
+                                                        <img src="../../Themes/Images/UserIcon.png" />
+                                                    </td>
+                                                    <td style="text-align: left; font-weight: 700; border-right-width: thick; border-right-color: #0099FF; border-right-style: groove" class="auto-style2">
+                                                        <asp:Label ID="lblUserNameTop" runat="server" Text="UserName"></asp:Label>
+                                                        &nbsp;
+                                                    </td>
+                                                    <td class="auto-style2">&nbsp;<a style="color: whitesmoke; font-size: 17px;" href="../Web%20Forms/frmLogin.aspx">Logout</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>                    
+                    </table>
+
+                </div>
+            </td>
+        </tr>              
+        <tr id="trBody" style="width: 100%; margin-top: 15px; float: none;">
+            <td>
+                <div id="page" class="container1" style="width: 100%; height: 640px">
+
+                    <form id="form1" runat="server">
+                        <div style="float:left;margin-left:0px;margin-top:-3px; width:100%; background-color:#4D8ED1;border-bottom-style:double">
+                            <div style="margin-left:323px">
+                             <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" BackColor="#4D8ED1" DynamicHorizontalOffset="8" CssClass="Menu" StaticSubMenuIndent="0px" OnMenuItemClick="Menu1_MenuItemClick">
+                                                <DynamicHoverStyle BackColor="Black" ForeColor="White" />
+                                                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="5px" />
+                                                <DynamicMenuStyle BackColor="#CCD8EC" BorderColor="BLUE" />
+                                                <DynamicSelectedStyle BackColor="#CCD8EC" />
+                                                <Items>
+                                                    <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmHomePage.aspx" Text="Home" ToolTip="Home" Value="Home"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Shipment" ToolTip="Shipment" Value="Shipment">
+                                                        <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmShipmentInformation.aspx" Text="Shipments Details" ToolTip="Shipments Details" Value="Shipments Details"></asp:MenuItem>
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem Text="Station" ToolTip="Station" Value="Station">
+                                                        <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmStationDashBoard.aspx" Text="Station View" ToolTip="Station View" Value="Station View"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmDisableStation.aspx" Text="Station Activation" ToolTip="Station Activation" Value="Station Activation"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmStations.aspx" Text="Station Detail" ToolTip="Station Detail" Value="Station Detail"></asp:MenuItem>
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem Text="Return (RMA)" ToolTip="Return (RMA)" Value="Return (RMA)">
+                                                        <asp:MenuItem NavigateUrl="~/Forms/Web Forms/DemoGrid.aspx" Text="Return Details" ToolTip="Return Details" Value="Return Details"></asp:MenuItem>
+                                                        <asp:MenuItem Text="New RMA" ToolTip="New RMA" Value="New RMA">
+                                                            <asp:MenuItem Text="Add RMA With PO" ToolTip="Add RMA With PO" Value="Add RMA With PO"></asp:MenuItem>
+                                                            <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmRMAEnter.aspx" Text="Add RMA Without PO" ToolTip="Add RMA Without PO" Value="Add RMA Without PO"></asp:MenuItem>
+                                                            <asp:MenuItem Text="Add RMA With SR" ToolTip="Add RMA With SR" Value="Add RMA With SR"></asp:MenuItem>
+                                                        </asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmRMAConfig.aspx" Text="Configuration" ToolTip="Configuration" Value="Configuration"></asp:MenuItem>
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem Text="Admin" ToolTip="Admin" Value="Admin">
+                                                        <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmRoles.aspx" Text="Admin Role" ToolTip="Role" Value="Role"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmErrorLog.aspx" Text="Admin Log" ToolTip="Log" Value="Log"></asp:MenuItem>
+                                                        <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmUserInformation.aspx" Text="Admin User" ToolTip="User" Value="User">
+                                                            <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmUserDetails.aspx" Text="User Detail" ToolTip="User Detail" Value="User Detail"></asp:MenuItem>
+                                                        </asp:MenuItem>
+                                                    </asp:MenuItem>
+                                                    <asp:MenuItem NavigateUrl="~/Forms/Web Forms/frmChart.aspx" Text="Reports" ToolTip="Reports" Value="Reports"></asp:MenuItem>
+                                                </Items>
+                                                <StaticHoverStyle BackColor="#CCD8EC" ForeColor="Black" />
+                                                <StaticMenuItemStyle Font-Bold="false" Font-Italic="false" Font-Size="17px" ForeColor="Black" HorizontalPadding="15px" ItemSpacing="25px" VerticalPadding="1px" BackColor="#4D8ED1" BorderColor="#CCD8EC" BorderWidth="1px" />
+                                                <StaticMenuStyle BackColor="#4D8ED1" BorderColor="White" />
+                                                <StaticSelectedStyle BackColor="#BAD8C0" />
+                                            </asp:Menu>
+                                </div>
+                        </div>
+                       
+
+                        <%--For PO --%>
+                            <asp:Panel ID="gridViewData" runat="server" CssClass="modalPopup"  style="background-image:url(../../3.jpg)" Height="500px" Width="600px" top="170px">
+                              
+                            <div class="border" id="Div2" style="height:auto; width: 530px;  margin:30px 30px 30px 30px" overflow: "scroll" onscroll="SetDivPosition()">
+                             
+                                  <div style="margin:10px;height:40px;text-align:center; vertical-align:middle;" class="header">
+                                   <asp:Label ID="lblMessageForPO" runat="server" Font-Size="Medium" style="color:black;text-align:center; vertical-align:middle;"></asp:Label>
+                                  </div>
+
+                                <div class="body">
+
+
+                                    <asp:GridView ID="gvReturnDetails" BorderColor="#4D8ED1" BorderWidth="5" Height="250" Width="515" runat="server" AutoGenerateColumns="False" Font-Names = "Arial"  Font-Size = "14pt"
+                                         AlternatingRowStyle-BackColor = "#4D8ED1" HeaderStyle-BackColor = "#4D8ED1" AllowPaging ="true" PageSize = "10"   >
+                                        <Columns>
+                                           
+                                              <%-- <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                            <asp:CheckBox ID="chkSelectAll"  runat="server" AutoPostBack="false" BorderColor="#4D8ED1" oncl/>
+                                                     </ItemTemplate>
+                                            </asp:TemplateField>
+    --%>
+
+  
+                  <%--  <asp:BoundField DataField="StudentID" HeaderText="StudentID" ReadOnly="True" ItemStyle-ForeColor="YellowGreen" ItemStyle-BackColor="SlateGray"
+                                                SortExpression="StudentID" />--%>
+                                           
+                                            <asp:BoundField DataField="SKUNumber"  HeaderText="SKUNumber" ItemStyle-ForeColor="black" ItemStyle-BackColor="white" ItemStyle-BorderColor="#4D8ED1"
+                                                SortExpression="SKUNumber" />
+                                         
+                                              <asp:BoundField DataField="SKU_Qty_Seq"  HeaderText="Quantity" ItemStyle-ForeColor="black" ItemStyle-BackColor="white" ItemStyle-BorderColor="#4D8ED1"
+                                                 SortExpression="SKU_Qty_Seq"/>
+                                              <asp:BoundField DataField="SKU_Sequence"  HeaderText="SKU_Sequence" ItemStyle-ForeColor="black" ItemStyle-BackColor="white" ItemStyle-BorderColor="#4D8ED1"
+                                                SortExpression="SKU_Sequence"/>
+                                              <asp:BoundField DataField="ProductID"  HeaderText="ProductID" ItemStyle-ForeColor="black" ItemStyle-BackColor="white" ItemStyle-BorderColor="#4D8ED1"
+                                                 SortExpression="ProductID" />
+                                            
+                                              <asp:BoundField DataField="LineType"  HeaderText="LineType" ItemStyle-ForeColor="black" ItemStyle-BackColor="white" ItemStyle-BorderColor="#4D8ED1"
+                                                 SortExpression="LineType"/>
+                                             <asp:BoundField DataField="ShipmentLines"  HeaderText="ShipmentLines" ItemStyle-ForeColor="black" ItemStyle-BackColor="white" ItemStyle-BorderColor="#4D8ED1"
+                                                 SortExpression="ShipmentLines"/>
+                                             <asp:BoundField DataField="ReturnLines"  HeaderText="ReturnLines" ItemStyle-ForeColor="black" ItemStyle-BackColor="white" ItemStyle-BorderColor="#4D8ED1"
+                                                 SortExpression="ReturnLines"/>
+                                             <asp:BoundField DataField="DeliveredQty"  HeaderText="Quantity" ItemStyle-ForeColor="black" ItemStyle-BackColor="white" ItemStyle-BorderColor="#4D8ED1"
+                                                 SortExpression="DeliveredQty"/>
+                                           <%--   <asp:BoundField DataField="SalesPrice"  HeaderText="SalesPrice" ItemStyle-ForeColor="black" ItemStyle-BackColor="white" ItemStyle-BorderColor="#4D8ED1"
+                                                SortExpression="SalesPrice" />
+                                                <asp:BoundField DataField="LineType"  HeaderText="LineType" ItemStyle-ForeColor="black" ItemStyle-BackColor="white" ItemStyle-BorderColor="#4D8ED1"
+                                                SortExpression="LineType" />--%>
+
+                                         <%--   <asp:TemplateField>
+                                                    <ItemTemplate>
+                                                            <asp:CheckBox ID="CheckBox1" runat="server" AutoPostBack="false" BorderColor="#4D8ED1"/>
+                                                     </ItemTemplate>
+                                            </asp:TemplateField>--%>
+                         
+                                            <asp:TemplateField>
+        <HeaderTemplate>
+            <asp:CheckBox ID="chkSelectAll" Text="Select All" TextAlign="left" runat="server"  onclick="checkAllRow(this);" />
+        </HeaderTemplate>
+                                     
+                                                    <ItemTemplate>
+                                                            <asp:CheckBox ID="CheckBox1" runat="server" AutoPostBack="false" BorderColor="#4D8ED1"/>
+                                                     </ItemTemplate>
+       <%-- <ItemTemplate>
+            <asp:CheckBox ID="chkSelectRow" runat="server" TextAlign="Left"  onclick="CheckRow(this);" />
+        </ItemTemplate>--%>
+    </asp:TemplateField>
+   
+                                        </Columns>
+   
+                                     <AlternatingRowStyle BackColor="#4D8ED1"  />
+                                    </asp:GridView>
+
+
+
+
+
+
+                                  
+                                </div>
+                               
+                                 <div class="footer" align="center">
+                                    <asp:Button ID="Button7" runat="server" CssClass="btnmaker" Text="Next" OnClick="btnPassGrid_Click1"/>
+                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                     <asp:Button ID="btnCancelForPO" runat="server" CssClass="btnmaker" Text="Cancel" OnClick="btnCancelForPO_Click" />
+                                </div>
+
+
+
+
+
+
+
+                            </div>
+                        </asp:Panel>
+
+                        
+                        <asp:Button ID="Button45" runat="server" Text="Button" Style="display: none" />
+                        <cc1:ModalPopupExtender ID="DataGrid" runat="server" PopupControlID="gridViewData" BackgroundCssClass="modalBackground"
+                            Enabled="True" TargetControlID="Button45">
+                        </cc1:ModalPopupExtender>
+
+                        <%--forSR-- %>
+
+
+
+
+
+
+                      
+                       <%-- <div>--%>
+                            <asp:Button ID="Button1" runat="server" Text="Button" Style="display: none" />
+                            <asp:Panel ID="pnlForPO" runat="server" CssClass="modalPopup" Style="display: none" DefaultButton="btnYesPO">
+                                <div class="header">
+                                    Enter PO Number
+                                </div>
+                                <div class="body">
+                                    <asp:TextBox ID="txtPONumber" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="footer" align="center">
+                                    <asp:Button ID="btnYesPO" runat="server" Text="Submit" OnClick="btnYesPO_Click" />
+                                    <asp:Button ID="btnNoPO" runat="server" Text="Cancel" />
+                                </div>
+                            </asp:Panel>
+                            <cc1:ModalPopupExtender ID="mpeForPO" runat="server" BackgroundCssClass="modalBackground" PopupControlID="pnlForPO"
+                                Enabled="True" TargetControlID="Button1" CancelControlID="btnNoPO">
+                            </cc1:ModalPopupExtender>
+
+                            <asp:Button ID="Button2" runat="server" Text="Button" Style="display: none" />
+                            <asp:Panel ID="pnlForSR" runat="server" CssClass="modalPopup" Style="display: none"  DefaultButton="btnYesSR">
+                                <div class="header">
+                                    Enter SR Number
+                                </div>
+                                <div class="body">
+                                    <asp:TextBox ID="txtSRNumber" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="footer" align="center">
+                                    <asp:Button ID="btnYesSR" runat="server" Text="Submit" OnClick="btnYesSR_Click" />
+                                    <asp:Button ID="btnNoSR" runat="server" Text="Cancel" />
+                                </div>
+                            </asp:Panel>
+                            <cc1:ModalPopupExtender ID="mpeForSR" runat="server" BackgroundCssClass="modalBackground" PopupControlID="pnlForSR"
+                                Enabled="True" TargetControlID="Button2" CancelControlID="btnNoSR">
+                            </cc1:ModalPopupExtender>
+
+                            <asp:Button ID="Button3" runat="server" Text="Button" Style="display: none" />
+                            <asp:Panel ID="pnlForPresentedSR" runat="server" CssClass="modalPopup" Style="display: none">
+                                <div class="header">
+                                    Message Box
+                                </div>
+                                <div class="body" style="color: red">
+                                    SRNumber is Already present. If you want to see Information about that SRNumber then goto Edit Page.
+                                </div>
+                                <div class="footer" align="center">
+                                    <asp:Button ID="btnOkForPresentedSR" runat="server" Text="Ok" />
+
+                                </div>
+                            </asp:Panel>
+                            <cc1:ModalPopupExtender ID="mpeForPresentedSR" runat="server" BackgroundCssClass="modalBackground" PopupControlID="pnlForPresentedSR"
+                                Enabled="True" TargetControlID="Button3" CancelControlID="btnOkForPresentedSR">
+                            </cc1:ModalPopupExtender>
+
+                           <asp:Button ID="btnWarning" runat="server" Text="Button" Style="display: none" />
+                            <asp:Panel ID="pnlForWarning" runat="server" CssClass="modalPopup" Style="display: none">
+                                <div class="header">
+                                   Warning!
+                                </div>
+                                <div class="body" style="color: red">
+                                    Select SKU's from Grid
+                                </div>
+                                <div class="footer" align="center">
+                                    <asp:Button ID="btnOkForWarning" runat="server" Text="Ok" />
+                                </div>
+                            </asp:Panel>
+                            <cc1:ModalPopupExtender ID="mpeForWarning" runat="server" BackgroundCssClass="modalBackground" PopupControlID="pnlForWarning"
+                                Enabled="True" TargetControlID="btnWarning" OkControlID="btnOkForWarning">
+                            </cc1:ModalPopupExtender>
+
+
+                            <asp:Button ID="Button4" runat="server" Text="Button" Style="display: none" />
+                            <asp:Panel ID="pnlForPresentedPO" runat="server" CssClass="modalPopup" Style="display: none">
+                                <div class="header">
+                                    Message Box
+                                </div>
+                                <div class="body" style="color: red">
+                                    PONumber is Already present. If you want to see Information about that PONumber then goto Edit Page.
+                                </div>
+                                <div class="footer" align="center">
+                                    <asp:Button ID="btnOkForPresentedPO" runat="server" Text="Ok" />
+
+                                </div>
+                            </asp:Panel>
+                            <cc1:ModalPopupExtender ID="mpeForPresentedPO" runat="server" BackgroundCssClass="modalBackground" PopupControlID="pnlForPresentedPO"
+                                Enabled="True" TargetControlID="Button4" CancelControlID="btnOkForPresentedPO">
+                            </cc1:ModalPopupExtender>
+
+                            <asp:Button ID="Button5" runat="server" Text="Button" Style="display: none" />
+                            <asp:Panel ID="pnlForWrongPO" runat="server" CssClass="modalPopup" Style="display: none">
+                                <div class="header">
+                                    Message Box
+                                </div>
+                                <div class="body" style="color: red">
+                                    Invalid PONumber
+                                </div>
+                                <div class="footer" align="center">
+                                    <asp:Button ID="btnOkForWrongPO" runat="server" Text="Ok" />
+                                </div>
+                            </asp:Panel>
+                            <cc1:ModalPopupExtender ID="mpeForWrongPO" runat="server" BackgroundCssClass="modalBackground" PopupControlID="pnlForWrongPO"
+                                Enabled="True" TargetControlID="Button5" OkControlID="btnOkForWrongPO">
+                            </cc1:ModalPopupExtender>
+
+
+                            <asp:Button ID="Button6" runat="server" Text="Button" Style="display: none" />
+                            <asp:Panel ID="pnlForWrongSR" runat="server" CssClass="modalPopup" Style="display: none">
+                                <div class="header">
+                                    Message Box
+                                </div>
+                                <div class="body" style="color: red">
+                                    Invalid SRNumber
+                                </div>
+                                <div class="footer" align="center">
+                                    <asp:Button ID="btnOkForWrongSR" runat="server" Text="Ok" />
+                                </div>
+                            </asp:Panel>
+                            <cc1:ModalPopupExtender ID="mpeForWrongSR" runat="server" BackgroundCssClass="modalBackground" PopupControlID="pnlForWrongSR"
+                                Enabled="True" TargetControlID="Button6" OkControlID="btnOkForWrongSR">
+                            </cc1:ModalPopupExtender>
+
+
+
+                       <%-- </div>--%>
+
+
+
+                        <div style="float: right; width: 100%;">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                                <asp:ScriptManager ID="ScriptManager2" runat="server" />
+
+
+                            </asp:ContentPlaceHolder>
+                        </div>
+
+
+
+
+
+
+
+
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr id="trFooter">
+            <td>
+                <div id="footer" style="border-top-style: double; border-top-width: medium; border-top-color: #0099FF; padding:0px 0px">
+                    
+                    <p><span style="text-align:center;float:left;margin-left:500px;"><asp:Label runat="server" ID="lblVersion" Text="Version">
+
+                    </asp:Label></span>Copyright (c) 2014 Kraus USA All rights reserved. </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

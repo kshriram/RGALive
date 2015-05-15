@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/KrausWarehouseServices.DTO.Shipping.ReportEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/KrausWarehouseServices.DTO.Shipping.ReportEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Get.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfShippingInfoBPNameDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShippingInfoBPNameDTO" nillable="true" type="tns:ShippingInfoBPNameDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShippingInfoBPNameDTO" nillable="true" type="tns:ArrayOfShippingInfoBPNameDTO" />
+  <xs:complexType name="ShippingInfoBPNameDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BPName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusinessPartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ShippingNumner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShippingInfoBPNameDTO" nillable="true" type="tns:ShippingInfoBPNameDTO" />
+  <xs:complexType name="ArrayOfPackingTimeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PackingTimeDTO" nillable="true" type="tns:PackingTimeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackingTimeDTO" nillable="true" type="tns:ArrayOfPackingTimeDTO" />
+  <xs:complexType name="PackingTimeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PackingID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="ShippingNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeSpend" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PackingTimeDTO" nillable="true" type="tns:PackingTimeDTO" />
+  <xs:complexType name="ArrayOfShipmentNumStatusDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShipmentNumStatusDTO" nillable="true" type="tns:ShipmentNumStatusDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShipmentNumStatusDTO" nillable="true" type="tns:ArrayOfShipmentNumStatusDTO" />
+  <xs:complexType name="ShipmentNumStatusDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackageID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ShippinStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShippingCompletedInt" type="xs:int" />
+      <xs:element minOccurs="0" name="ShippingNum" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShipmentNumStatusDTO" nillable="true" type="tns:ShipmentNumStatusDTO" />
+  <xs:complexType name="ArrayOfStationToatlPackedDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StationToatlPackedDTO" nillable="true" type="tns:StationToatlPackedDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStationToatlPackedDTO" nillable="true" type="tns:ArrayOfStationToatlPackedDTO" />
+  <xs:complexType name="StationToatlPackedDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PartiallyPacked" type="xs:int" />
+      <xs:element minOccurs="0" name="StationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPacked" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StationToatlPackedDTO" nillable="true" type="tns:StationToatlPackedDTO" />
+  <xs:complexType name="ArrayOfUserTotalPacked">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserTotalPacked" nillable="true" type="tns:UserTotalPacked" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserTotalPacked" nillable="true" type="tns:ArrayOfUserTotalPacked" />
+  <xs:complexType name="UserTotalPacked">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PartiallyPacked" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPacked" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserTotalPacked" nillable="true" type="tns:UserTotalPacked" />
+  <xs:complexType name="ArrayOfDashBoardStionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DashBoardStionDTO" nillable="true" type="tns:DashBoardStionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDashBoardStionDTO" nillable="true" type="tns:ArrayOfDashBoardStionDTO" />
+  <xs:complexType name="DashBoardStionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCaught" type="xs:int" />
+      <xs:element minOccurs="0" name="PackerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipmentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPacked" type="xs:int" />
+      <xs:element minOccurs="0" name="packagePerhr" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DashBoardStionDTO" nillable="true" type="tns:DashBoardStionDTO" />
+  <xs:complexType name="ArrayOfUserCurrentStationAndDeviceIDDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserCurrentStationAndDeviceIDDTO" nillable="true" type="tns:UserCurrentStationAndDeviceIDDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserCurrentStationAndDeviceIDDTO" nillable="true" type="tns:ArrayOfUserCurrentStationAndDeviceIDDTO" />
+  <xs:complexType name="UserCurrentStationAndDeviceIDDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Datetime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserCurrentStationAndDeviceIDDTO" nillable="true" type="tns:UserCurrentStationAndDeviceIDDTO" />
+  <xs:complexType name="ArrayOfUserShipmentCountDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserShipmentCountDTO" nillable="true" type="tns:UserShipmentCountDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserShipmentCountDTO" nillable="true" type="tns:ArrayOfUserShipmentCountDTO" />
+  <xs:complexType name="UserShipmentCountDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Datepacked" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShipmentCount" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserShipmentCountDTO" nillable="true" type="tns:UserShipmentCountDTO" />
+  <xs:complexType name="ArrayOfShipmentPackedTodayAndAvgTimeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShipmentPackedTodayAndAvgTimeDTO" nillable="true" type="tns:ShipmentPackedTodayAndAvgTimeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShipmentPackedTodayAndAvgTimeDTO" nillable="true" type="tns:ArrayOfShipmentPackedTodayAndAvgTimeDTO" />
+  <xs:complexType name="ShipmentPackedTodayAndAvgTimeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Packed" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShipmentPackedTodayAndAvgTimeDTO" nillable="true" type="tns:ShipmentPackedTodayAndAvgTimeDTO" />
+</xs:schema>

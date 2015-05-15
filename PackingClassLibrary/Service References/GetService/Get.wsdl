@@ -1,0 +1,1979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Get" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Get.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Get.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Get.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/KrausWarehouseServices.DTO.Shipping" />
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Get.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/KrausWarehouseServices.DTO.Shipping.ReportEntity" />
+      <xsd:import schemaLocation="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Get.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGet_View_Get_Shipping_DataAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:View_Get_Shipping_DataAll" />
+  </wsdl:message>
+  <wsdl:message name="IGet_View_Get_Shipping_DataAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:View_Get_Shipping_DataAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_View_Get_Shipping_DataByShippingNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:View_Get_Shipping_DataByShippingNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_View_Get_Shipping_DataByShippingNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:View_Get_Shipping_DataByShippingNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_View_Get_Shipping_DataByLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:View_Get_Shipping_DataByLocation" />
+  </wsdl:message>
+  <wsdl:message name="IGet_View_Get_Shipping_DataByLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:View_Get_Shipping_DataByLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_View_Get_Shipping_DataBySKUNameAndShippngNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:View_Get_Shipping_DataBySKUNameAndShippngNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_View_Get_Shipping_DataBySKUNameAndShippngNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:View_Get_Shipping_DataBySKUNameAndShippngNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_AllAudit_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllAudit" />
+  </wsdl:message>
+  <wsdl:message name="IGet_AllAudit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllAuditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_AuditByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuditByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_AuditByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuditByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_AuditByUserLogID_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuditByUserLogID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_AuditByUserLogID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuditByUserLogIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_AllBox_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllBox" />
+  </wsdl:message>
+  <wsdl:message name="IGet_AllBox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_BoxByBoxID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BoxByBoxID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_BoxByBoxID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoxByBoxIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_BoxByBoxNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:BoxByBoxNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_BoxByBoxNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoxByBoxNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_BoxByPackingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BoxByPackingID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_BoxByPackingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BoxByPackingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageAllPackge_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageAllPackge" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageAllPackge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageAllPackgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByPackageID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByPackageID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByPackageID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByPackageIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByStationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByStationID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByStationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByStationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByShippingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByShippingID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByShippingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByShippingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByShippingNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByShippingNum" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByShippingNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByShippingNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByUserIDAndDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByUserIDAndDate" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByUserIDAndDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByUserIDAndDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByShippingNumAndLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByShippingNumAndLocation" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageByShippingNumAndLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageByShippingNumAndLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackingID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_MaxPackingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:MaxPackingID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_MaxPackingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MaxPackingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllPackageBoxTrackings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPackageBoxTrackings" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllPackageBoxTrackings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPackageBoxTrackingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllShipmentDetailPageGrid1s_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShipmentDetailPageGrid1s" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllShipmentDetailPageGrid1s_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShipmentDetailPageGrid1sResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllShipmentDetailPageGrid1Totals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShipmentDetailPageGrid1Totals" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllShipmentDetailPageGrid1Totals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShipmentDetailPageGrid1TotalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllShipmentDetailPageGrid1ByDateSearchs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShipmentDetailPageGrid1ByDateSearchs" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllShipmentDetailPageGrid1ByDateSearchs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShipmentDetailPageGrid1ByDateSearchsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllShipmentDetailPageGrid1ByDateSearchExpecteds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShipmentDetailPageGrid1ByDateSearchExpecteds" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllShipmentDetailPageGrid1ByDateSearchExpecteds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShipmentDetailPageGrid1ByDateSearchExpectedsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageDetailAllPackageDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageDetailAllPackageDetail" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageDetailAllPackageDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageDetailAllPackageDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageDetailByPackingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageDetailByPackingID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageDetailByPackingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageDetailByPackingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageDetailByBoxNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackageDetailByBoxNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackageDetailByBoxNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackageDetailByBoxNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RoleAllRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleAllRoles" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RoleAllRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleAllRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RoleByRoleID_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleByRoleID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_RoleByRoleID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleByRoleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingAllShipping_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingAllShipping" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingAllShipping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingAllShippingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingWithAllPackage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingWithAllPackage" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingWithAllPackage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingWithAllPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByShippingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByShippingID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByShippingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByShippingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByShippingNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByShippingNum" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByShippingNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByShippingNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByOrderID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByOrderID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByOrderID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByOrderIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByCustomerPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByCustomerPO" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByCustomerPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByCustomerPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByVendorName_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByVendorName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByVendorName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByVendorNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByVendorNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByVendorNum" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByVendorNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByVendorNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByCarrier_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByCarrier" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByCarrier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByCarrierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByShippingROWID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByShippingROWID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByShippingROWID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByShippingROWIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByGetByFromDateToDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByGetByFromDateToDate" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ShippingByGetByFromDateToDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShippingByGetByFromDateToDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_StationMasterAllStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:StationMasterAllStation" />
+  </wsdl:message>
+  <wsdl:message name="IGet_StationMasterAllStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StationMasterAllStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_StationMasterByStationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:StationMasterByStationID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_StationMasterByStationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StationMasterByStationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_StationMasterByStationName_InputMessage">
+    <wsdl:part name="parameters" element="tns:StationMasterByStationName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_StationMasterByStationName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StationMasterByStationNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_StationMasterByRequestedUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:StationMasterByRequestedUserID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_StationMasterByRequestedUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StationMasterByRequestedUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingAll" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByTrackingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByTrackingID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByTrackingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByTrackingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByPackingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByPackingID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByPackingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByPackingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByShippingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByShippingID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByShippingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByShippingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByBoxID_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByBoxID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByBoxID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByBoxIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByTrackingNUmber_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByTrackingNUmber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByTrackingNUmber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByTrackingNUmberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByVendorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByVendorID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByVendorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByVendorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByBoxNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByBoxNum" />
+  </wsdl:message>
+  <wsdl:message name="IGet_TrackingByBoxNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrackingByBoxNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserAllUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserAllUser" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserAllUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserByUserName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByRoleID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserByRoleID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByRoleID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserByRoleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByRoleName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserByRoleName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserByRoleName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserByRoleNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserStationAllUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserStationAllUser" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserStationAllUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserStationAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserStationByUserStationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserStationByUserStationID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserStationByUserStationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserStationByUserStationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserStationByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserStationByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserStationByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserStationByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserStationByStationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserStationByStationID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UserStationByStationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserStationByStationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ErrorLogAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:ErrorLogAll" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ErrorLogAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ErrorLogAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UPCtoSKUName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPCtoSKUName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UPCtoSKUName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPCtoSKUNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_SKUNameToUPCCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SKUNameToUPCCode" />
+  </wsdl:message>
+  <wsdl:message name="IGet_SKUNameToUPCCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SKUNameToUPCCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewAllShippingDeatil_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAllShippingDeatil" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewAllShippingDeatil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewAllShippingDeatilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewGetByShipmentNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewGetByShipmentNum" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewGetByShipmentNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewGetByShipmentNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewGetByOrderID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewGetByOrderID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewGetByOrderID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewGetByOrderIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewGetByPoNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewGetByPoNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewGetByPoNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewGetByPoNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewGetBySupplierNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewGetBySupplierNumber" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewGetBySupplierNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewGetBySupplierNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewGetByVendorName_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewGetByVendorName" />
+  </wsdl:message>
+  <wsdl:message name="IGet_ViewGetByVendorName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewGetByVendorNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetBySKUname_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySKUname" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetBySKUname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBySKUnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetByBarcode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByBarcode" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetByBarcode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetBpinfoOFShippingNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBpinfoOFShippingNum" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetBpinfoOFShippingNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBpinfoOFShippingNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_getBPNameFromBPNUM_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBPNameFromBPNUM" />
+  </wsdl:message>
+  <wsdl:message name="IGet_getBPNameFromBPNUM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBPNameFromBPNUMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity1" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity1Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity2" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity2Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity3_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity3" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity3Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity4_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity4" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity4Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity5_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity5" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity5Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity6_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity6" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity6_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity6Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity7_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity7" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity7_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity7Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity8_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity8" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantity8_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantity8Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation21_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation21" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation21_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation21Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation22_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation22" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation22_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation22Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation23_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation23" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation23_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation23Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation24_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation24" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation24_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation24Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation25_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation25" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation25_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation25Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation26_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation26" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation26_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation26Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation27_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation27" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation27_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation27Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation28_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation28" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetPackingTimeAndQantityByStation28_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackingTimeAndQantityByStation28Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetStaus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaus" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetStaus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStausResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetEachStationPacked_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEachStationPacked" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetEachStationPacked_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEachStationPackedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetEachStationPacked1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEachStationPacked1" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetEachStationPacked1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEachStationPacked1Response" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetEachUserPacked_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEachUserPacked" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetEachUserPacked_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEachUserPackedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetStationByReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationByReport" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetStationByReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationByReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackedTodayByStationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PackedTodayByStationID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_PackedTodayByStationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PackedTodayByStationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UnderPackingID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnderPackingID" />
+  </wsdl:message>
+  <wsdl:message name="IGet_UnderPackingID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnderPackingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_LastLoginStationAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:LastLoginStationAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IGet_LastLoginStationAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LastLoginStationAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllShipmentCountByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShipmentCountByUser" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetAllShipmentCountByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllShipmentCountByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetTotalShipmentPackedTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalShipmentPackedTime" />
+  </wsdl:message>
+  <wsdl:message name="IGet_GetTotalShipmentPackedTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalShipmentPackedTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGet_Execute_InputMessage">
+    <wsdl:part name="parameters" element="tns:Execute" />
+  </wsdl:message>
+  <wsdl:message name="IGet_Execute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGet">
+    <wsdl:operation name="View_Get_Shipping_DataAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/View_Get_Shipping_DataAll" message="tns:IGet_View_Get_Shipping_DataAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/View_Get_Shipping_DataAllResponse" message="tns:IGet_View_Get_Shipping_DataAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="View_Get_Shipping_DataByShippingNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/View_Get_Shipping_DataByShippingNumber" message="tns:IGet_View_Get_Shipping_DataByShippingNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/View_Get_Shipping_DataByShippingNumberResponse" message="tns:IGet_View_Get_Shipping_DataByShippingNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="View_Get_Shipping_DataByLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/View_Get_Shipping_DataByLocation" message="tns:IGet_View_Get_Shipping_DataByLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/View_Get_Shipping_DataByLocationResponse" message="tns:IGet_View_Get_Shipping_DataByLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="View_Get_Shipping_DataBySKUNameAndShippngNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/View_Get_Shipping_DataBySKUNameAndShippngNumber" message="tns:IGet_View_Get_Shipping_DataBySKUNameAndShippngNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/View_Get_Shipping_DataBySKUNameAndShippngNumberResponse" message="tns:IGet_View_Get_Shipping_DataBySKUNameAndShippngNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllAudit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/AllAudit" message="tns:IGet_AllAudit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/AllAuditResponse" message="tns:IGet_AllAudit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/AuditByUserID" message="tns:IGet_AuditByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/AuditByUserIDResponse" message="tns:IGet_AuditByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditByUserLogID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/AuditByUserLogID" message="tns:IGet_AuditByUserLogID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/AuditByUserLogIDResponse" message="tns:IGet_AuditByUserLogID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllBox">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/AllBox" message="tns:IGet_AllBox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/AllBoxResponse" message="tns:IGet_AllBox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BoxByBoxID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/BoxByBoxID" message="tns:IGet_BoxByBoxID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/BoxByBoxIDResponse" message="tns:IGet_BoxByBoxID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BoxByBoxNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/BoxByBoxNumber" message="tns:IGet_BoxByBoxNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/BoxByBoxNumberResponse" message="tns:IGet_BoxByBoxNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BoxByPackingID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/BoxByPackingID" message="tns:IGet_BoxByPackingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/BoxByPackingIDResponse" message="tns:IGet_BoxByPackingID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageAllPackge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageAllPackge" message="tns:IGet_PackageAllPackge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageAllPackgeResponse" message="tns:IGet_PackageAllPackge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageByPackageID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageByPackageID" message="tns:IGet_PackageByPackageID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageByPackageIDResponse" message="tns:IGet_PackageByPackageID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageByStationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageByStationID" message="tns:IGet_PackageByStationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageByStationIDResponse" message="tns:IGet_PackageByStationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageByUserID" message="tns:IGet_PackageByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageByUserIDResponse" message="tns:IGet_PackageByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageByShippingID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageByShippingID" message="tns:IGet_PackageByShippingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageByShippingIDResponse" message="tns:IGet_PackageByShippingID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageByShippingNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageByShippingNum" message="tns:IGet_PackageByShippingNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageByShippingNumResponse" message="tns:IGet_PackageByShippingNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageByUserIDAndDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageByUserIDAndDate" message="tns:IGet_PackageByUserIDAndDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageByUserIDAndDateResponse" message="tns:IGet_PackageByUserIDAndDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageByShippingNumAndLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageByShippingNumAndLocation" message="tns:IGet_PackageByShippingNumAndLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageByShippingNumAndLocationResponse" message="tns:IGet_PackageByShippingNumAndLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackingID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackingID" message="tns:IGet_PackingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackingIDResponse" message="tns:IGet_PackingID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MaxPackingID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/MaxPackingID" message="tns:IGet_MaxPackingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/MaxPackingIDResponse" message="tns:IGet_MaxPackingID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPackageBoxTrackings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetAllPackageBoxTrackings" message="tns:IGet_GetAllPackageBoxTrackings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetAllPackageBoxTrackingsResponse" message="tns:IGet_GetAllPackageBoxTrackings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShipmentDetailPageGrid1s">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1s" message="tns:IGet_GetAllShipmentDetailPageGrid1s_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1sResponse" message="tns:IGet_GetAllShipmentDetailPageGrid1s_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShipmentDetailPageGrid1Totals">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1Totals" message="tns:IGet_GetAllShipmentDetailPageGrid1Totals_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1TotalsResponse" message="tns:IGet_GetAllShipmentDetailPageGrid1Totals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShipmentDetailPageGrid1ByDateSearchs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1ByDateSearchs" message="tns:IGet_GetAllShipmentDetailPageGrid1ByDateSearchs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1ByDateSearchsResponse" message="tns:IGet_GetAllShipmentDetailPageGrid1ByDateSearchs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShipmentDetailPageGrid1ByDateSearchExpecteds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1ByDateSearchExpecteds" message="tns:IGet_GetAllShipmentDetailPageGrid1ByDateSearchExpecteds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1ByDateSearchExpectedsResponse" message="tns:IGet_GetAllShipmentDetailPageGrid1ByDateSearchExpecteds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageDetailAllPackageDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageDetailAllPackageDetail" message="tns:IGet_PackageDetailAllPackageDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageDetailAllPackageDetailResponse" message="tns:IGet_PackageDetailAllPackageDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageDetailByPackingID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageDetailByPackingID" message="tns:IGet_PackageDetailByPackingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageDetailByPackingIDResponse" message="tns:IGet_PackageDetailByPackingID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackageDetailByBoxNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackageDetailByBoxNumber" message="tns:IGet_PackageDetailByBoxNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackageDetailByBoxNumberResponse" message="tns:IGet_PackageDetailByBoxNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleAllRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/RoleAllRoles" message="tns:IGet_RoleAllRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/RoleAllRolesResponse" message="tns:IGet_RoleAllRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleByRoleID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/RoleByRoleID" message="tns:IGet_RoleByRoleID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/RoleByRoleIDResponse" message="tns:IGet_RoleByRoleID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingAllShipping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingAllShipping" message="tns:IGet_ShippingAllShipping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingAllShippingResponse" message="tns:IGet_ShippingAllShipping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingWithAllPackage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingWithAllPackage" message="tns:IGet_ShippingWithAllPackage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingWithAllPackageResponse" message="tns:IGet_ShippingWithAllPackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByShippingID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingByShippingID" message="tns:IGet_ShippingByShippingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingByShippingIDResponse" message="tns:IGet_ShippingByShippingID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByShippingNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingByShippingNum" message="tns:IGet_ShippingByShippingNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingByShippingNumResponse" message="tns:IGet_ShippingByShippingNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByOrderID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingByOrderID" message="tns:IGet_ShippingByOrderID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingByOrderIDResponse" message="tns:IGet_ShippingByOrderID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByCustomerPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingByCustomerPO" message="tns:IGet_ShippingByCustomerPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingByCustomerPOResponse" message="tns:IGet_ShippingByCustomerPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByVendorName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingByVendorName" message="tns:IGet_ShippingByVendorName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingByVendorNameResponse" message="tns:IGet_ShippingByVendorName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByVendorNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingByVendorNum" message="tns:IGet_ShippingByVendorNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingByVendorNumResponse" message="tns:IGet_ShippingByVendorNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByCarrier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingByCarrier" message="tns:IGet_ShippingByCarrier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingByCarrierResponse" message="tns:IGet_ShippingByCarrier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByShippingROWID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingByShippingROWID" message="tns:IGet_ShippingByShippingROWID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingByShippingROWIDResponse" message="tns:IGet_ShippingByShippingROWID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByGetByFromDateToDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ShippingByGetByFromDateToDate" message="tns:IGet_ShippingByGetByFromDateToDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ShippingByGetByFromDateToDateResponse" message="tns:IGet_ShippingByGetByFromDateToDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StationMasterAllStation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/StationMasterAllStation" message="tns:IGet_StationMasterAllStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/StationMasterAllStationResponse" message="tns:IGet_StationMasterAllStation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StationMasterByStationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/StationMasterByStationID" message="tns:IGet_StationMasterByStationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/StationMasterByStationIDResponse" message="tns:IGet_StationMasterByStationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StationMasterByStationName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/StationMasterByStationName" message="tns:IGet_StationMasterByStationName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/StationMasterByStationNameResponse" message="tns:IGet_StationMasterByStationName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StationMasterByRequestedUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/StationMasterByRequestedUserID" message="tns:IGet_StationMasterByRequestedUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/StationMasterByRequestedUserIDResponse" message="tns:IGet_StationMasterByRequestedUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/TrackingAll" message="tns:IGet_TrackingAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/TrackingAllResponse" message="tns:IGet_TrackingAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByTrackingID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/TrackingByTrackingID" message="tns:IGet_TrackingByTrackingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/TrackingByTrackingIDResponse" message="tns:IGet_TrackingByTrackingID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByPackingID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/TrackingByPackingID" message="tns:IGet_TrackingByPackingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/TrackingByPackingIDResponse" message="tns:IGet_TrackingByPackingID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByShippingID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/TrackingByShippingID" message="tns:IGet_TrackingByShippingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/TrackingByShippingIDResponse" message="tns:IGet_TrackingByShippingID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByBoxID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/TrackingByBoxID" message="tns:IGet_TrackingByBoxID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/TrackingByBoxIDResponse" message="tns:IGet_TrackingByBoxID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByTrackingNUmber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/TrackingByTrackingNUmber" message="tns:IGet_TrackingByTrackingNUmber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/TrackingByTrackingNUmberResponse" message="tns:IGet_TrackingByTrackingNUmber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByVendorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/TrackingByVendorID" message="tns:IGet_TrackingByVendorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/TrackingByVendorIDResponse" message="tns:IGet_TrackingByVendorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByBoxNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/TrackingByBoxNum" message="tns:IGet_TrackingByBoxNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/TrackingByBoxNumResponse" message="tns:IGet_TrackingByBoxNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAllUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserAllUser" message="tns:IGet_UserAllUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserAllUserResponse" message="tns:IGet_UserAllUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserByUserID" message="tns:IGet_UserByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserByUserIDResponse" message="tns:IGet_UserByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserByUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserByUserName" message="tns:IGet_UserByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserByUserNameResponse" message="tns:IGet_UserByUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserByRoleID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserByRoleID" message="tns:IGet_UserByRoleID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserByRoleIDResponse" message="tns:IGet_UserByRoleID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserByRoleName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserByRoleName" message="tns:IGet_UserByRoleName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserByRoleNameResponse" message="tns:IGet_UserByRoleName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserStationAllUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserStationAllUser" message="tns:IGet_UserStationAllUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserStationAllUserResponse" message="tns:IGet_UserStationAllUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserStationByUserStationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserStationByUserStationID" message="tns:IGet_UserStationByUserStationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserStationByUserStationIDResponse" message="tns:IGet_UserStationByUserStationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserStationByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserStationByUserID" message="tns:IGet_UserStationByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserStationByUserIDResponse" message="tns:IGet_UserStationByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserStationByStationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UserStationByStationID" message="tns:IGet_UserStationByStationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UserStationByStationIDResponse" message="tns:IGet_UserStationByStationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ErrorLogAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ErrorLogAll" message="tns:IGet_ErrorLogAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ErrorLogAllResponse" message="tns:IGet_ErrorLogAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPCtoSKUName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UPCtoSKUName" message="tns:IGet_UPCtoSKUName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UPCtoSKUNameResponse" message="tns:IGet_UPCtoSKUName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SKUNameToUPCCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/SKUNameToUPCCode" message="tns:IGet_SKUNameToUPCCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/SKUNameToUPCCodeResponse" message="tns:IGet_SKUNameToUPCCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewAllShippingDeatil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ViewAllShippingDeatil" message="tns:IGet_ViewAllShippingDeatil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ViewAllShippingDeatilResponse" message="tns:IGet_ViewAllShippingDeatil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewGetByShipmentNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ViewGetByShipmentNum" message="tns:IGet_ViewGetByShipmentNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ViewGetByShipmentNumResponse" message="tns:IGet_ViewGetByShipmentNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewGetByOrderID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ViewGetByOrderID" message="tns:IGet_ViewGetByOrderID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ViewGetByOrderIDResponse" message="tns:IGet_ViewGetByOrderID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewGetByPoNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ViewGetByPoNumber" message="tns:IGet_ViewGetByPoNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ViewGetByPoNumberResponse" message="tns:IGet_ViewGetByPoNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewGetBySupplierNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ViewGetBySupplierNumber" message="tns:IGet_ViewGetBySupplierNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ViewGetBySupplierNumberResponse" message="tns:IGet_ViewGetBySupplierNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewGetByVendorName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/ViewGetByVendorName" message="tns:IGet_ViewGetByVendorName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ViewGetByVendorNameResponse" message="tns:IGet_ViewGetByVendorName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBySKUname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetBySKUname" message="tns:IGet_GetBySKUname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetBySKUnameResponse" message="tns:IGet_GetBySKUname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByBarcode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetByBarcode" message="tns:IGet_GetByBarcode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetByBarcodeResponse" message="tns:IGet_GetByBarcode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBpinfoOFShippingNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetBpinfoOFShippingNum" message="tns:IGet_GetBpinfoOFShippingNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetBpinfoOFShippingNumResponse" message="tns:IGet_GetBpinfoOFShippingNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBPNameFromBPNUM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/getBPNameFromBPNUM" message="tns:IGet_getBPNameFromBPNUM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/getBPNameFromBPNUMResponse" message="tns:IGet_getBPNameFromBPNUM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity1" message="tns:IGet_GetPackingTimeAndQantity1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity1Response" message="tns:IGet_GetPackingTimeAndQantity1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity2" message="tns:IGet_GetPackingTimeAndQantity2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity2Response" message="tns:IGet_GetPackingTimeAndQantity2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity3" message="tns:IGet_GetPackingTimeAndQantity3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity3Response" message="tns:IGet_GetPackingTimeAndQantity3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity4" message="tns:IGet_GetPackingTimeAndQantity4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity4Response" message="tns:IGet_GetPackingTimeAndQantity4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity5" message="tns:IGet_GetPackingTimeAndQantity5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity5Response" message="tns:IGet_GetPackingTimeAndQantity5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity6">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity6" message="tns:IGet_GetPackingTimeAndQantity6_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity6Response" message="tns:IGet_GetPackingTimeAndQantity6_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity7">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity7" message="tns:IGet_GetPackingTimeAndQantity7_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity7Response" message="tns:IGet_GetPackingTimeAndQantity7_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity8">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity8" message="tns:IGet_GetPackingTimeAndQantity8_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantity8Response" message="tns:IGet_GetPackingTimeAndQantity8_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation21">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation21" message="tns:IGet_GetPackingTimeAndQantityByStation21_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation21Response" message="tns:IGet_GetPackingTimeAndQantityByStation21_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation22">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation22" message="tns:IGet_GetPackingTimeAndQantityByStation22_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation22Response" message="tns:IGet_GetPackingTimeAndQantityByStation22_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation23">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation23" message="tns:IGet_GetPackingTimeAndQantityByStation23_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation23Response" message="tns:IGet_GetPackingTimeAndQantityByStation23_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation24">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation24" message="tns:IGet_GetPackingTimeAndQantityByStation24_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation24Response" message="tns:IGet_GetPackingTimeAndQantityByStation24_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation25">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation25" message="tns:IGet_GetPackingTimeAndQantityByStation25_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation25Response" message="tns:IGet_GetPackingTimeAndQantityByStation25_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation26">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation26" message="tns:IGet_GetPackingTimeAndQantityByStation26_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation26Response" message="tns:IGet_GetPackingTimeAndQantityByStation26_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation27">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation27" message="tns:IGet_GetPackingTimeAndQantityByStation27_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation27Response" message="tns:IGet_GetPackingTimeAndQantityByStation27_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation28">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation28" message="tns:IGet_GetPackingTimeAndQantityByStation28_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation28Response" message="tns:IGet_GetPackingTimeAndQantityByStation28_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetStaus" message="tns:IGet_GetStaus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetStausResponse" message="tns:IGet_GetStaus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEachStationPacked">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetEachStationPacked" message="tns:IGet_GetEachStationPacked_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetEachStationPackedResponse" message="tns:IGet_GetEachStationPacked_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEachStationPacked1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetEachStationPacked1" message="tns:IGet_GetEachStationPacked1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetEachStationPacked1Response" message="tns:IGet_GetEachStationPacked1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEachUserPacked">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetEachUserPacked" message="tns:IGet_GetEachUserPacked_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetEachUserPackedResponse" message="tns:IGet_GetEachUserPacked_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationByReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetStationByReport" message="tns:IGet_GetStationByReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetStationByReportResponse" message="tns:IGet_GetStationByReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PackedTodayByStationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/PackedTodayByStationID" message="tns:IGet_PackedTodayByStationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/PackedTodayByStationIDResponse" message="tns:IGet_PackedTodayByStationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnderPackingID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/UnderPackingID" message="tns:IGet_UnderPackingID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/UnderPackingIDResponse" message="tns:IGet_UnderPackingID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LastLoginStationAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/LastLoginStationAllUsers" message="tns:IGet_LastLoginStationAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/LastLoginStationAllUsersResponse" message="tns:IGet_LastLoginStationAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShipmentCountByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetAllShipmentCountByUser" message="tns:IGet_GetAllShipmentCountByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetAllShipmentCountByUserResponse" message="tns:IGet_GetAllShipmentCountByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalShipmentPackedTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/GetTotalShipmentPackedTime" message="tns:IGet_GetTotalShipmentPackedTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/GetTotalShipmentPackedTimeResponse" message="tns:IGet_GetTotalShipmentPackedTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Execute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGet/Execute" message="tns:IGet_Execute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGet/ExecuteResponse" message="tns:IGet_Execute_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGet" type="tns:IGet">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="View_Get_Shipping_DataAll">
+      <soap:operation soapAction="http://tempuri.org/IGet/View_Get_Shipping_DataAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_Get_Shipping_DataByShippingNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/View_Get_Shipping_DataByShippingNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_Get_Shipping_DataByLocation">
+      <soap:operation soapAction="http://tempuri.org/IGet/View_Get_Shipping_DataByLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="View_Get_Shipping_DataBySKUNameAndShippngNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/View_Get_Shipping_DataBySKUNameAndShippngNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllAudit">
+      <soap:operation soapAction="http://tempuri.org/IGet/AllAudit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditByUserID">
+      <soap:operation soapAction="http://tempuri.org/IGet/AuditByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditByUserLogID">
+      <soap:operation soapAction="http://tempuri.org/IGet/AuditByUserLogID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllBox">
+      <soap:operation soapAction="http://tempuri.org/IGet/AllBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoxByBoxID">
+      <soap:operation soapAction="http://tempuri.org/IGet/BoxByBoxID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoxByBoxNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/BoxByBoxNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BoxByPackingID">
+      <soap:operation soapAction="http://tempuri.org/IGet/BoxByPackingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageAllPackge">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageAllPackge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageByPackageID">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageByPackageID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageByStationID">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageByStationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageByUserID">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageByShippingID">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageByShippingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageByShippingNum">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageByShippingNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageByUserIDAndDate">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageByUserIDAndDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageByShippingNumAndLocation">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageByShippingNumAndLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackingID">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaxPackingID">
+      <soap:operation soapAction="http://tempuri.org/IGet/MaxPackingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPackageBoxTrackings">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetAllPackageBoxTrackings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShipmentDetailPageGrid1s">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1s" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShipmentDetailPageGrid1Totals">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1Totals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShipmentDetailPageGrid1ByDateSearchs">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1ByDateSearchs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShipmentDetailPageGrid1ByDateSearchExpecteds">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetAllShipmentDetailPageGrid1ByDateSearchExpecteds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageDetailAllPackageDetail">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageDetailAllPackageDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageDetailByPackingID">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageDetailByPackingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackageDetailByBoxNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackageDetailByBoxNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleAllRoles">
+      <soap:operation soapAction="http://tempuri.org/IGet/RoleAllRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleByRoleID">
+      <soap:operation soapAction="http://tempuri.org/IGet/RoleByRoleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingAllShipping">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingAllShipping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingWithAllPackage">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingWithAllPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByShippingID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingByShippingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByShippingNum">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingByShippingNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByOrderID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingByOrderID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByCustomerPO">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingByCustomerPO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByVendorName">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingByVendorName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByVendorNum">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingByVendorNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByCarrier">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingByCarrier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByShippingROWID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingByShippingROWID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShippingByGetByFromDateToDate">
+      <soap:operation soapAction="http://tempuri.org/IGet/ShippingByGetByFromDateToDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StationMasterAllStation">
+      <soap:operation soapAction="http://tempuri.org/IGet/StationMasterAllStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StationMasterByStationID">
+      <soap:operation soapAction="http://tempuri.org/IGet/StationMasterByStationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StationMasterByStationName">
+      <soap:operation soapAction="http://tempuri.org/IGet/StationMasterByStationName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StationMasterByRequestedUserID">
+      <soap:operation soapAction="http://tempuri.org/IGet/StationMasterByRequestedUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingAll">
+      <soap:operation soapAction="http://tempuri.org/IGet/TrackingAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByTrackingID">
+      <soap:operation soapAction="http://tempuri.org/IGet/TrackingByTrackingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByPackingID">
+      <soap:operation soapAction="http://tempuri.org/IGet/TrackingByPackingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByShippingID">
+      <soap:operation soapAction="http://tempuri.org/IGet/TrackingByShippingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByBoxID">
+      <soap:operation soapAction="http://tempuri.org/IGet/TrackingByBoxID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByTrackingNUmber">
+      <soap:operation soapAction="http://tempuri.org/IGet/TrackingByTrackingNUmber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByVendorID">
+      <soap:operation soapAction="http://tempuri.org/IGet/TrackingByVendorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackingByBoxNum">
+      <soap:operation soapAction="http://tempuri.org/IGet/TrackingByBoxNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAllUser">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserByUserID">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserByUserName">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserByRoleID">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserByRoleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserByRoleName">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserByRoleName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserStationAllUser">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserStationAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserStationByUserStationID">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserStationByUserStationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserStationByUserID">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserStationByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserStationByStationID">
+      <soap:operation soapAction="http://tempuri.org/IGet/UserStationByStationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ErrorLogAll">
+      <soap:operation soapAction="http://tempuri.org/IGet/ErrorLogAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPCtoSKUName">
+      <soap:operation soapAction="http://tempuri.org/IGet/UPCtoSKUName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SKUNameToUPCCode">
+      <soap:operation soapAction="http://tempuri.org/IGet/SKUNameToUPCCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewAllShippingDeatil">
+      <soap:operation soapAction="http://tempuri.org/IGet/ViewAllShippingDeatil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewGetByShipmentNum">
+      <soap:operation soapAction="http://tempuri.org/IGet/ViewGetByShipmentNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewGetByOrderID">
+      <soap:operation soapAction="http://tempuri.org/IGet/ViewGetByOrderID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewGetByPoNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/ViewGetByPoNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewGetBySupplierNumber">
+      <soap:operation soapAction="http://tempuri.org/IGet/ViewGetBySupplierNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewGetByVendorName">
+      <soap:operation soapAction="http://tempuri.org/IGet/ViewGetByVendorName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBySKUname">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetBySKUname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByBarcode">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetByBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBpinfoOFShippingNum">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetBpinfoOFShippingNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBPNameFromBPNUM">
+      <soap:operation soapAction="http://tempuri.org/IGet/getBPNameFromBPNUM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity1">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantity1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity2">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantity2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity3">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantity3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity4">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantity4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity5">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantity5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity6">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantity6" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity7">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantity7" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantity8">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantity8" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation21">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation21" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation22">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation22" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation23">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation23" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation24">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation24" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation25">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation25" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation26">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation26" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation27">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation27" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackingTimeAndQantityByStation28">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetPackingTimeAndQantityByStation28" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaus">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetStaus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEachStationPacked">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetEachStationPacked" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEachStationPacked1">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetEachStationPacked1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEachUserPacked">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetEachUserPacked" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationByReport">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetStationByReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PackedTodayByStationID">
+      <soap:operation soapAction="http://tempuri.org/IGet/PackedTodayByStationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnderPackingID">
+      <soap:operation soapAction="http://tempuri.org/IGet/UnderPackingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastLoginStationAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IGet/LastLoginStationAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllShipmentCountByUser">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetAllShipmentCountByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalShipmentPackedTime">
+      <soap:operation soapAction="http://tempuri.org/IGet/GetTotalShipmentPackedTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Execute">
+      <soap:operation soapAction="http://tempuri.org/IGet/Execute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Get">
+    <wsdl:port name="BasicHttpBinding_IGet" binding="tns:BasicHttpBinding_IGet">
+      <soap:address location="http://192.168.1.16:28/KrausWarehouseServices.Service.Shipping.Get.svc/SOA" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
